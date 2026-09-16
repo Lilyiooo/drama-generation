@@ -1,0 +1,22 @@
+{
+  "script": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S03__R01/exported_scripts/S03__S1_lifecycle_v4_obligation_retrieval__R01.txt",
+  "model": "Qwen3.8-27B",
+  "evaluation_mode": "dimension_ledger_multi_agent_9_3_3",
+  "scores": {
+    "剧本逻辑总分": {
+      "initial_mean": 42.0,
+      "final_ledger": 80.32,
+      "fusion_50_50": 61.16
+    },
+    "剧本质量最终总分": {
+      "initial_mean": 71.1,
+      "final_ledger": 87.31,
+      "fusion_50_50": 79.2
+    },
+    "剧本创意总分": {
+      "initial_mean": 62.0,
+      "final_ledger": 50.1,
+      "fusion_50_50": 56.05
+    }
+  }
+}

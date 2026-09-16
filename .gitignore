@@ -1,5 +1,7 @@
-# Generated trajectories, prompts, API logs, and exported scripts
-outputs/
+# New generated trajectories, API logs, and exports stay local.
+# The reviewed historical method and baseline outputs are tracked separately.
+outputs/qwen36_full_best_v1/
+outputs/*.log
 
 # Local credentials and environment overrides
 .env

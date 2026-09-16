@@ -1,0 +1,9 @@
+{
+  "pipeline_mode": "bare",
+  "method_condition": "S1_lifecycle_v4_obligation_retrieval",
+  "bare_history": "full",
+  "story": "S02",
+  "run_id": "R02",
+  "fake_api": false,
+  "paired_seed_source": "S1_lifecycle_v4_obligation_retrieval"
+}

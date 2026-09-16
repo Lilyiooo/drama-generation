@@ -1,0 +1,1391 @@
+{
+  "description": "Historical complete 40-episode scripts, exact generation prompts, and fixed evaluator final scores",
+  "source_experiment": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep",
+  "method_condition": "S1_lifecycle_v4_obligation_retrieval",
+  "baseline_history": "all prior episode scripts",
+  "evaluator": "Qwen3.8-27B drama_evaluator",
+  "trajectory_count": 36,
+  "episode_count": 1440,
+  "mean_scores": {
+    "method": {
+      "logic": 70.22055555555556,
+      "quality": 79.80611111111111,
+      "creativity": 59.31888888888889
+    },
+    "baseline": {
+      "logic": 58.015,
+      "quality": 61.964999999999996,
+      "creativity": 44.580555555555556
+    }
+  },
+  "trajectories": [
+    {
+      "arm": "method",
+      "story": "S01",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S01__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "a5bef206c142b5bc519c90c46bac408cdc094b6308c1143dd828fe2e1a3b3b73",
+          "bytes": 14239
+        },
+        "execution_protocol.json": {
+          "source_sha256": "2b35b66e12e2357d458b35546506d216d6cf494e6841575b5cdb789eeaf436c7",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "7887a88846877fd43cc69f343a0db47adf4390063f2bc891811b01ccdaabba40",
+          "bytes": 256886
+        },
+        "contexts.jsonl": {
+          "source_sha256": "0dcd027478680defa5e8617d4944d718c21d19357bdb05282bebf7d41f0852b3",
+          "bytes": 1908582
+        },
+        "script.txt": {
+          "source_sha256": "bd33e6acf16278747f51f63122148d13f9e81fcb9a89d26728232d15020367d4",
+          "bytes": 235954
+        },
+        "scores.json": {
+          "source_sha256": "f836f3248d1609c83f2a9389dfc028f3fe81ad592320187c51edee56481d5cd4",
+          "bytes": 665
+        }
+      },
+      "scores": {
+        "logic": 72.0,
+        "quality": 80.13,
+        "creativity": 56.3
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S01",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S01__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "126334cb23e1901496ad4db66f3d1b3196f4cfdd0e0cc91de28db23cf696d9e6",
+          "bytes": 14237
+        },
+        "execution_protocol.json": {
+          "source_sha256": "534a7eac71ce6349428f5c7ddb4776d9d841222d1cd1af880961a9692b4a712f",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "5d936d7c95d7ad4ad081083af8f2e7cebe82b8c628a6a522fc8920d174abe8c6",
+          "bytes": 257756
+        },
+        "contexts.jsonl": {
+          "source_sha256": "232cb2422054ff929700c6b561fb425247ceba2ed9083104b0504103160b4096",
+          "bytes": 2024530
+        },
+        "script.txt": {
+          "source_sha256": "37d401386d3a126fae936f8f2dd72c10d53c7c3eb6f868861e0afd3349992df8",
+          "bytes": 236749
+        },
+        "scores.json": {
+          "source_sha256": "22afefb428ac9a35afe0e08b30ebcc7b946cbb8250e6ff2c251bb50c7dda40d7",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 71.81,
+        "quality": 75.38,
+        "creativity": 53.9
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S01",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S01__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "0fc6f6ea4a048f6b490f4ef5fde159fcf857a1d6fe77aedb485e52714bec9a84",
+          "bytes": 14234
+        },
+        "execution_protocol.json": {
+          "source_sha256": "1df5e74e30ab25c4c8e32eec5e9e4a6bc90a1d0901ecf21ffe2ced3b22616605",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "55dba9ccb162594b8d613f9840537d8a04e31ea7efb9d8ace18fdbe9f616ebe6",
+          "bytes": 244575
+        },
+        "contexts.jsonl": {
+          "source_sha256": "a8bee88a0789312e1b6d0046da3f0c2288b734c30b6ad7b4a0b95d07d78aaad5",
+          "bytes": 1917411
+        },
+        "script.txt": {
+          "source_sha256": "af3e01e62412cce52eccd5aa888d647e21f0d495575632a8267f42f6b7281364",
+          "bytes": 223829
+        },
+        "scores.json": {
+          "source_sha256": "bd3082bad32da75511cb2f84ea2ca4f4511c1793fc41fba8d4ebc050b78fae88",
+          "bytes": 669
+        }
+      },
+      "scores": {
+        "logic": 74.45,
+        "quality": 79.03,
+        "creativity": 53.97
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S02",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S02__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "35a53e63904f64251a33126cc488c28f54f8612e50d6b852f802eacf23c3e538",
+          "bytes": 14243
+        },
+        "execution_protocol.json": {
+          "source_sha256": "37f791fb061afbd3e54489fb5835c948e35dac94b7ab16a1341783181f72f1aa",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "cc3eee67071e635097e4bf45898073a8427741eede90668ecfcfbd8d85aaf545",
+          "bytes": 248584
+        },
+        "contexts.jsonl": {
+          "source_sha256": "69617585c54736e6d7331bd65d76184942e7328fdf7694c504d106af384f1787",
+          "bytes": 1822031
+        },
+        "script.txt": {
+          "source_sha256": "a10f5a2c906878cdc2e17e0c062ea9f8e6b820639712ce08c5c93ae86b1f22a3",
+          "bytes": 226952
+        },
+        "scores.json": {
+          "source_sha256": "a0d72ae9414dc8ccbafd3dce3870c5dcf4c875f0b8eaf479e6e642ec859b3d1c",
+          "bytes": 669
+        }
+      },
+      "scores": {
+        "logic": 78.04,
+        "quality": 82.59,
+        "creativity": 63.05
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S02",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S02__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "21abaf6c0853c093ecc8ca8aa5ea66c59a9c4977a014ab1174ab4be0734da527",
+          "bytes": 14241
+        },
+        "execution_protocol.json": {
+          "source_sha256": "7ce3b90c15eac0f12c81af6a842cf75692c61b44d73b9537ec088f6651ec3795",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "b2f7715f1c0cff0aed4ab93bfc4b2f72a0ea488086b378d5d51ebd26e40c9f5e",
+          "bytes": 251405
+        },
+        "contexts.jsonl": {
+          "source_sha256": "5403208f3d36464ca581b1f2b711b19de3c598943a95e73db0f49ba9f8710130",
+          "bytes": 1796716
+        },
+        "script.txt": {
+          "source_sha256": "106b5a1f03a5542a7386c7bb89f499d2fb1cacfc1b8f44b9643ae6ab5bf62a53",
+          "bytes": 229801
+        },
+        "scores.json": {
+          "source_sha256": "c2f7f26eedbb4bb0d5443b971aaf69711b9a746a896cf2310aebbac2acac648f",
+          "bytes": 666
+        }
+      },
+      "scores": {
+        "logic": 76.34,
+        "quality": 74.58,
+        "creativity": 56.3
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S02",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S02__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "679244d182127153516232af64a4157d7082bcf1084be31887915d4bd40372fe",
+          "bytes": 14244
+        },
+        "execution_protocol.json": {
+          "source_sha256": "748b5c805820c015105f6e84498edeee2cea5de7f7233e48f7d033711057c298",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "27be07ab53aec91bb21331cb2887a80b82b87555df48b7419c0c99cddb750ca9",
+          "bytes": 249216
+        },
+        "contexts.jsonl": {
+          "source_sha256": "1c0383d1ada64b204a6337873e3a7672c22bc5a7f48313007d447a7f56161409",
+          "bytes": 1710414
+        },
+        "script.txt": {
+          "source_sha256": "04e76d8a57918a5cc7a63bdca950ee036248d07923a086fca384141c890340a0",
+          "bytes": 227927
+        },
+        "scores.json": {
+          "source_sha256": "b59291f447c3713e95e367ee7c0e8684f377637c1abc32959e0dbad65590285d",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 75.31,
+        "quality": 78.98,
+        "creativity": 56.25
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S03",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S03__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "ce61ecfa1fbf5efbda09b0407ec3061f86925c77f56aafdfbb11f04a18479e72",
+          "bytes": 14233
+        },
+        "execution_protocol.json": {
+          "source_sha256": "4aa10678f4e7f0e14bf1e5c42988b8fe19451b90835f97693b2ebf77dfde7d8d",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "8ee1730d5dae08193cface7b831075e8b2b3136ee2db52b86555b9db014c4598",
+          "bytes": 231221
+        },
+        "contexts.jsonl": {
+          "source_sha256": "e36f7d61ed73184535da3977544c1c4005c5d7dcefe0bf549266e0cb5add5e50",
+          "bytes": 1565092
+        },
+        "script.txt": {
+          "source_sha256": "e10514445723f93cc748b05b0cdade4032fa971caf92a1bcc72b0950e037d942",
+          "bytes": 210176
+        },
+        "scores.json": {
+          "source_sha256": "6f587be2962c615f3fb30e0ec536058d40395950f3a1d9c53ff4bdfd736c8eaf",
+          "bytes": 666
+        }
+      },
+      "scores": {
+        "logic": 61.16,
+        "quality": 79.2,
+        "creativity": 56.05
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S03",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S03__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "7792901fdeffde98d7f2061d7784a301e04309b449dcd73662ecde5a75ab6ab8",
+          "bytes": 14235
+        },
+        "execution_protocol.json": {
+          "source_sha256": "5bd0da7d205ee2f9789e1adacf35133c1e5a8f8a46703f275c6f5af3295afee1",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "12faf6f444512ef0ace9ddd601ed66d2429cb483b403c9f0f912599a911dedd3",
+          "bytes": 229891
+        },
+        "contexts.jsonl": {
+          "source_sha256": "e93e01f193fafe14181aa27a8f86f1730473d88090ce350b8da0a07d6dc2984d",
+          "bytes": 1666142
+        },
+        "script.txt": {
+          "source_sha256": "b980b4d19038ae719604a2fa3f2e07bdb9e2c076e5ec47ab16b8fec587383c52",
+          "bytes": 208976
+        },
+        "scores.json": {
+          "source_sha256": "2010e40d765e3a0ed6503ce51f6ae68e5e0d039dc0f32cf3c0c6728e4e3ffa3e",
+          "bytes": 665
+        }
+      },
+      "scores": {
+        "logic": 60.8,
+        "quality": 76.61,
+        "creativity": 59.3
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S03",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S03__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "8468c70b78336cae83ea8c6c0f18ebd4533237d82900b55c031b69203e363c6b",
+          "bytes": 14246
+        },
+        "execution_protocol.json": {
+          "source_sha256": "2d7ab6ae1ede9258cf432b348c1c635a2254d2754870d4c8afde5cbb20ffbc0f",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "c51614132ffa4f8b7dd705cb8eb0eca2d51e806c3989bb0a344998d32b174ab7",
+          "bytes": 232294
+        },
+        "contexts.jsonl": {
+          "source_sha256": "613b33da3b6f9691e7d79bed2f08017ea0dcedac9c21d0e8650be0b22bf3aa69",
+          "bytes": 1798709
+        },
+        "script.txt": {
+          "source_sha256": "db875d6e4e9dadbb9284c031da4a6f30a13fd216b1444d4486968cb851bbd291",
+          "bytes": 211224
+        },
+        "scores.json": {
+          "source_sha256": "53f1a5710850405407e91d145052d846de77ab76f8083547dbb07201a1fd5afb",
+          "bytes": 668
+        }
+      },
+      "scores": {
+        "logic": 62.8,
+        "quality": 78.86,
+        "creativity": 57.36
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S04",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S04__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "960a43dcbe30cbfb083fa970285b32961a40a593218eb2d293db57f4cdb9fc41",
+          "bytes": 14240
+        },
+        "execution_protocol.json": {
+          "source_sha256": "49ed77c5276974d537e1b0ac84aaeb8d4786df9d0f8a137e662a1d6cdc8dacb8",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "ef3207019fe6e083b675271a703b6d3bdeb251c5d1fe6726727fa6f527fc1232",
+          "bytes": 245740
+        },
+        "contexts.jsonl": {
+          "source_sha256": "8ba2a00354e5b04dd8f6b2cd11e1a92e6d536150e25d129060c5b5967e25f09a",
+          "bytes": 1920151
+        },
+        "script.txt": {
+          "source_sha256": "9472146e42baeac43bbf709d2be72fb2811cc8da372f959200244b02f24dd5ca",
+          "bytes": 224425
+        },
+        "scores.json": {
+          "source_sha256": "a150ffc446cd4b79657d56010269d131e5301fce5e6e9583b089d75a1a152391",
+          "bytes": 664
+        }
+      },
+      "scores": {
+        "logic": 74.65,
+        "quality": 80.5,
+        "creativity": 65.7
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S04",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S04__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "fef1cecc9c725c76da62a407995100ef8680485eb633e9d40168c43a676755e7",
+          "bytes": 14240
+        },
+        "execution_protocol.json": {
+          "source_sha256": "cdb24493fb5627556ea7be622a9cbdd69ed5746c4e2ae16edc2e5282e0f94ee3",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "ff3ef40ecf976dca3140437a54aaf29231bcabb9bf563f1bf275d968f21afb03",
+          "bytes": 236614
+        },
+        "contexts.jsonl": {
+          "source_sha256": "ac8b735f479685cd17d7363e0a689751d93d16a71d24814f58de35136c74e3e9",
+          "bytes": 1924196
+        },
+        "script.txt": {
+          "source_sha256": "ab3d622f4d66c5f8af41d651c7e13cdd85cf707a006df43b38e697beaab2d03d",
+          "bytes": 215200
+        },
+        "scores.json": {
+          "source_sha256": "5e04ae827a41b452b40093bc4fdac6ed96d8e33982df9715394c6feb5c0bac24",
+          "bytes": 666
+        }
+      },
+      "scores": {
+        "logic": 76.91,
+        "quality": 82.67,
+        "creativity": 63.9
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S04",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S04__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "38deac09a744fec29e09acea23f7eeaca19a5e0eeba3fec865e1939149666a8b",
+          "bytes": 14240
+        },
+        "execution_protocol.json": {
+          "source_sha256": "d9e9119374bcaf5c607310927d16c1170210787ed7e7d539219fc8a4b2112240",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "18fd66a1a9d14273b7e78c39272e1a5bdf2f07ccd3d6fb6042aa6bb1b99cf4ca",
+          "bytes": 237402
+        },
+        "contexts.jsonl": {
+          "source_sha256": "5df4d02930965f4ddba251dd6786ff5c7902375b871e02bd606fbb9a855a0fb2",
+          "bytes": 1902098
+        },
+        "script.txt": {
+          "source_sha256": "63f4d1fca5106f5a726d342a88a0226be9a35bd53e626bc6d664deb61d7b702f",
+          "bytes": 216149
+        },
+        "scores.json": {
+          "source_sha256": "178bba05fe6b60a9608c4f5455978aa6493f24e379c4a8e6b725f5c5124d7fee",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 77.27,
+        "quality": 83.14,
+        "creativity": 75.4
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S05",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S05__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "26fd73085242db271621558ec7766d9c8e7b9d701e4f3af6a785e3718ad95892",
+          "bytes": 14242
+        },
+        "execution_protocol.json": {
+          "source_sha256": "ef7113d97784159f6aecfbe88ff1303d3ce73cee929a345f11945102ae4e5894",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "498e91e62421e5bf7d4aeca072f7b2f238c00b65c4f20f981ca9e3207bd85c1d",
+          "bytes": 237403
+        },
+        "contexts.jsonl": {
+          "source_sha256": "9a7edc684c49d80fb13e8050047a67f9fc10c6296a7b2c110351e93184d92702",
+          "bytes": 1805916
+        },
+        "script.txt": {
+          "source_sha256": "37221b2045fc23740615c846157810ab6402c51362c2c2e51d4fd106ff36f94b",
+          "bytes": 216385
+        },
+        "scores.json": {
+          "source_sha256": "9f13aa49b168bb9fa7c52c7fcca99a8223ec7875517e869ae4e14a32257100e7",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 61.26,
+        "quality": 79.99,
+        "creativity": 58.25
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S05",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S05__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "436ce8c94f48c6102ae6533bf32e62377b7a752fffa595f26b0c792cf2ebce11",
+          "bytes": 14237
+        },
+        "execution_protocol.json": {
+          "source_sha256": "38b769591ba5e842bae8d0404b9467c6bafed1633cf608861dafa1e693154826",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "12086c46db56c0217abb3123311a7f1976493229689375e153a1b4455682d862",
+          "bytes": 238044
+        },
+        "contexts.jsonl": {
+          "source_sha256": "2e4fc95eb7855b5dffdcd46e8408550773284a2bd862cee81d363f50a314969a",
+          "bytes": 1959239
+        },
+        "script.txt": {
+          "source_sha256": "733ceae8c44f471ed4acf5800aea9e288dad8a816cc7309e48c9f6f9a011927f",
+          "bytes": 217058
+        },
+        "scores.json": {
+          "source_sha256": "e9197ddd5d4822addc7a043846d9f1b0dd63a48d0dfbcb1ae0458d0b72b45702",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 60.4,
+        "quality": 79.37,
+        "creativity": 56.56
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S05",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S05__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "78f55cc0772b1fc94ba0fff63fa70941621e3a0142d1a7300638386d8a689773",
+          "bytes": 14243
+        },
+        "execution_protocol.json": {
+          "source_sha256": "c39ce5c95cb18de989ccefb21b0843b0b0448a8c08b2e904618331eb9c347e6e",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "a93d8136c8f21b0eab06e175ec0c508b1ae696eb8920a2a9b4ac9d856fb35738",
+          "bytes": 236012
+        },
+        "contexts.jsonl": {
+          "source_sha256": "72c352c1b3f376d1a75c1cac3c0d86f5b1f1db30dbd40166bb03a9b09637a048",
+          "bytes": 2026447
+        },
+        "script.txt": {
+          "source_sha256": "2e6e007853706af7fe93ec68a1b8651f4ee9e25d90ab8911ef4b06199f67c445",
+          "bytes": 215034
+        },
+        "scores.json": {
+          "source_sha256": "08764d8598c4a7d806dc0898817d5466e9da4dbffcd42e45e907f6c2b8f70ec9",
+          "bytes": 668
+        }
+      },
+      "scores": {
+        "logic": 64.57,
+        "quality": 79.88,
+        "creativity": 60.65
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S06",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S06__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "a34ba19bf3b625f4018b20d7a4c3912d11810506010d7a14bf1aa105e3c20aae",
+          "bytes": 14243
+        },
+        "execution_protocol.json": {
+          "source_sha256": "d367addd2c7df34b60f3c9410ebf2ffef42a8edb372916f048cb9f972d4c0cf8",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "ea5cf399c5fdb3fe9ed967a85006b9f04172417d67514f1194cde77fe6c0d99a",
+          "bytes": 247012
+        },
+        "contexts.jsonl": {
+          "source_sha256": "cc17354d2f15786c2d08fec48316253c81501f088206ae7e1947526dcdfb6820",
+          "bytes": 1764917
+        },
+        "script.txt": {
+          "source_sha256": "84631bfd9bdfa902915f32c6932cbac302fe6fb1bf82639d040d15c8a6505080",
+          "bytes": 225559
+        },
+        "scores.json": {
+          "source_sha256": "373938aa5f2addb93930cd06ab237f19df85de10bcc20cd7819c2dc22e6e56b5",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 69.0,
+        "quality": 80.49,
+        "creativity": 57.9
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S06",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S06__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "7bdd2f42f461dc914f76d538d86ee27529ca42e976e30ba5d4ef7f609e640b9f",
+          "bytes": 14238
+        },
+        "execution_protocol.json": {
+          "source_sha256": "20902c2a01c0181ce98622255edc0101a33301df787497a27a9e2cd72645545b",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "ec98fc48f1f9e3bc27b47360e885776293f7a4871c60057a587b3ef8f21b435b",
+          "bytes": 242742
+        },
+        "contexts.jsonl": {
+          "source_sha256": "8bad99b97ae3af10f1a9d9560139ec4dcde2cb32f8fad39b54d3e91e51b0a2ee",
+          "bytes": 1927703
+        },
+        "script.txt": {
+          "source_sha256": "2b5fd34b9216ff55c6906aa2ca94ff22cdb1fcb35b5ebed7732be2f2eef53b5b",
+          "bytes": 221446
+        },
+        "scores.json": {
+          "source_sha256": "8b413a817c126012ae32644b827521ced6bb2586cbe3a0df13d1051c8a964975",
+          "bytes": 667
+        }
+      },
+      "scores": {
+        "logic": 74.58,
+        "quality": 80.92,
+        "creativity": 59.45
+      }
+    },
+    {
+      "arm": "method",
+      "story": "S06",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/method/S06__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "0a94c9017b712be5c196509e7b8b277f94e9c2dc7507ea869d56e63af8c10175",
+          "bytes": 14246
+        },
+        "execution_protocol.json": {
+          "source_sha256": "94820ffec91b3c978dba3b101d612acbf9705ee9d33443d6f4e6ec703f85c77e",
+          "bytes": 239
+        },
+        "generations.jsonl": {
+          "source_sha256": "fa242139ee6128d342617728059111bd451485aae57b5f678a5dedcbb9f85f5c",
+          "bytes": 232498
+        },
+        "contexts.jsonl": {
+          "source_sha256": "42fd4ab4387115b35284a86a92cd06cf82bfd5672e588c2e3508a80d9bc957ab",
+          "bytes": 1867059
+        },
+        "script.txt": {
+          "source_sha256": "f15956376e4b3e80bba1c2b3398800ef8cad32b75d41d700b7bf68989c742dd6",
+          "bytes": 211113
+        },
+        "scores.json": {
+          "source_sha256": "1bde28842bcfc8ad8ac6246c2f78c9c55a52da991b53343b7f1ec5cf352514ff",
+          "bytes": 668
+        }
+      },
+      "scores": {
+        "logic": 72.62,
+        "quality": 84.19,
+        "creativity": 57.45
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S01",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S01__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "f1f6ff907b66c19c9b14c3fde6349952630c0d66b71b0c390fe30a1aa26f01bd",
+          "bytes": 9946
+        },
+        "execution_protocol.json": {
+          "source_sha256": "9052ae66529b529b4ec5dd60ddabd30b05483ea0797c85b4f4ad5303bc7fdd5e",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "fb2af097549ee8cf5ba54c4459ff6e029f3a4ab4f264394ea0f4c1b228cb0c6c",
+          "bytes": 312346
+        },
+        "contexts.jsonl": {
+          "source_sha256": "c9cb992dee739b2fa8bc636510ad669213fa539b06b4b1cf2cd8f41287af1d33",
+          "bytes": 5962874
+        },
+        "script.txt": {
+          "source_sha256": "b228254163825cc51f63e1809b9af44dbda1fc7f2d7388d48a668fec51ab0041",
+          "bytes": 294636
+        },
+        "scores.json": {
+          "source_sha256": "3277fee395134b1df97e23f2a67f6aaababa1834fb52677cace0d2b9a32cfda0",
+          "bytes": 639
+        }
+      },
+      "scores": {
+        "logic": 62.81,
+        "quality": 61.09,
+        "creativity": 43.72
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S01",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S01__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "111de6d9f05e46b6a119a65b42976fa5ea8813c36bd1b38078db3f1116a6bb55",
+          "bytes": 9944
+        },
+        "execution_protocol.json": {
+          "source_sha256": "9b1ce6d714fca916017e00a30a1520baf01b73f86632549c3eb71ed0b5027bd6",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "fc1c5580ef94a3c0ebc6a919516caa82b4dde1def7ce2f8108bbff6ae396b934",
+          "bytes": 314762
+        },
+        "contexts.jsonl": {
+          "source_sha256": "36792bfcc61fb05322c23a35e41b62dc28ca16c8779d08593c9fadbd0ad43611",
+          "bytes": 5980412
+        },
+        "script.txt": {
+          "source_sha256": "69a0223f332b5d23a8bb532b63a854c626d1dce7ab8eb63e3b5b80ed09a57f10",
+          "bytes": 297136
+        },
+        "scores.json": {
+          "source_sha256": "940be3e044b5a27debe45cf8e6aa4b016c7739ccc7b33d49129a162bbc8a5c8e",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 61.84,
+        "quality": 61.02,
+        "creativity": 41.5
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S01",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S01__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "93c67db62941c3283f3840169baedf43f33d206f479446690e9cbe9ded659220",
+          "bytes": 9941
+        },
+        "execution_protocol.json": {
+          "source_sha256": "2b0e5beb5c14c5c68d68a756a9de2c3578e9e05258fbe266f804fbfe2b9d727b",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "7792e1c38e52b5e6db747222f7fe49730b2cd6ab8b372b100b4e2e0cb43cd79f",
+          "bytes": 307114
+        },
+        "contexts.jsonl": {
+          "source_sha256": "d656a51caa8b9ad9324200a1bda2ed672fce12adcfbca97099186315d5572aee",
+          "bytes": 5803460
+        },
+        "script.txt": {
+          "source_sha256": "d8c7ba96948d6449fa30ecb21ffecdf5208ff4d8f87cb9d5a9b74ab99abcc906",
+          "bytes": 289367
+        },
+        "scores.json": {
+          "source_sha256": "fa14385d45708f545c64b36903661da4363795897aca9bd2a0ad185566da76ec",
+          "bytes": 639
+        }
+      },
+      "scores": {
+        "logic": 60.17,
+        "quality": 63.88,
+        "creativity": 43.95
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S02",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S02__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "5d3c5e51d5409b5efdb8977a634ad33bcf3ddce455e52718a9d78c09a833bf9f",
+          "bytes": 9950
+        },
+        "execution_protocol.json": {
+          "source_sha256": "720f6c58bb786b16510d9ea4b960856c419a2b2557b2d25122531e9ff45c415e",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "1488846c813b352d8a2f8b0d17bcd46fe16a636361e17ba2ff0078542923751c",
+          "bytes": 315585
+        },
+        "contexts.jsonl": {
+          "source_sha256": "0674c74c2857862e44847ef4b46ead812e1e887d54ed76fb9080e08640538c1b",
+          "bytes": 6067980
+        },
+        "script.txt": {
+          "source_sha256": "b2a93279b92b482195cc3b6df1bb169041fe67de24f752636a2206151203a5e3",
+          "bytes": 296797
+        },
+        "scores.json": {
+          "source_sha256": "939c61e5ffaa1b0f06a4a19e549af6289c8e78ff94347027f35b25e6948e76ae",
+          "bytes": 636
+        }
+      },
+      "scores": {
+        "logic": 61.1,
+        "quality": 67.49,
+        "creativity": 46.5
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S02",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S02__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "624c163f12dda9bbaf061bc033cc1fbfa45e6bc7e7d4acac744cb8150be67c6d",
+          "bytes": 9948
+        },
+        "execution_protocol.json": {
+          "source_sha256": "b113d39d4e9f30b4f7b0fcc03e1ca91c2f3427e02702a1a0a9d951e0a44b43a7",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "a1e73b8cf2fd7ceab5bca54d40ef24f764fd5a10cf4f514a503bbbed30d0f226",
+          "bytes": 332562
+        },
+        "contexts.jsonl": {
+          "source_sha256": "8b57dbee4695b4f42ef68d434957095b829660fad3c8365b2d21b5f9c6703bec",
+          "bytes": 6193060
+        },
+        "script.txt": {
+          "source_sha256": "669dbbea3c4656a7180d0812b5eee54fc7b3850f433932f630c05abbbdf1c967",
+          "bytes": 314068
+        },
+        "scores.json": {
+          "source_sha256": "226678c9c84432f42551ff6ee24ef3602cf49294217c118334bd01dff480eaf0",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 65.11,
+        "quality": 62.87,
+        "creativity": 46.05
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S02",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S02__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "4ed7b651ada9c6740c52c2b8e0fc9ba521c631d7f778950c8e0fa5faf75fc1e2",
+          "bytes": 9951
+        },
+        "execution_protocol.json": {
+          "source_sha256": "c0529081288a23db1d5c9f936060419f193c41443c2a828d1066c46c7f08b513",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "4c56e63c58bc705be6258192f45980a59b8528c37882b5e57400e3f4c4a21561",
+          "bytes": 263024
+        },
+        "contexts.jsonl": {
+          "source_sha256": "03fe6ab927a5220afcb3c26723501d048b2305eaed96934e93d60d4c4330e193",
+          "bytes": 5102789
+        },
+        "script.txt": {
+          "source_sha256": "53fa40ca4a13d48ae7525800d6520d0246ada05e1213d8c3661b00df8076939b",
+          "bytes": 244047
+        },
+        "scores.json": {
+          "source_sha256": "5c2e07df70b82215c0fe9fc3f4eb68e0524b680184278d147bca06a78f12f4cd",
+          "bytes": 637
+        }
+      },
+      "scores": {
+        "logic": 65.22,
+        "quality": 59.31,
+        "creativity": 47.2
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S03",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S03__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "5cef9a06e5be61cbe89a6c2c65802982e542f1021ecaa7417e32a54f7ca0f962",
+          "bytes": 9940
+        },
+        "execution_protocol.json": {
+          "source_sha256": "a34b84a4a04e2316d6b38f708dd58074bfc898aaf49bd780feb14f418ac2f949",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "a04de29993fc1a186b5e7783c959dc2c57ed064a65d246779a3b24d3c9827506",
+          "bytes": 258251
+        },
+        "contexts.jsonl": {
+          "source_sha256": "98b84f649cf99320719c76a978a706b271fe2640530346cf9195d12ac2b83814",
+          "bytes": 5187080
+        },
+        "script.txt": {
+          "source_sha256": "b0e7fcee262c80179c8205685fc340fe7808411bcc902cd35673776e5adfa952",
+          "bytes": 240915
+        },
+        "scores.json": {
+          "source_sha256": "be441730e98f310e99bf26210bd05cdbbcd5de975a32de312e106fef0fd61081",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 59.59,
+        "quality": 63.34,
+        "creativity": 44.65
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S03",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S03__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "a6416e0abbda3f50345059f81e2002f6f8e83b6647d66ce2d5256cd04775fdce",
+          "bytes": 9942
+        },
+        "execution_protocol.json": {
+          "source_sha256": "554be57f7b66854bcb723e908c0a92b52684c99ca7f066bdaa82b059dcac1814",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "9f65d526892e6853ce67b3d385b63911a1850a751ad7f3befd244c3cabf7a76f",
+          "bytes": 254841
+        },
+        "contexts.jsonl": {
+          "source_sha256": "2970a9b9b2c6d2b2a3adf3c28f67eb6f5f6e31d4ede9b4f6be89244b4124c103",
+          "bytes": 5080805
+        },
+        "script.txt": {
+          "source_sha256": "0210017ad30dab2373398d947801219fc0bafc046ebf24c11c7244e758e1b733",
+          "bytes": 237619
+        },
+        "scores.json": {
+          "source_sha256": "bcf298bed489ce0bb6c8ffe1dae40c7868ff424207c5b920e3af4b7b8f84e879",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 62.49,
+        "quality": 59.92,
+        "creativity": 43.25
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S03",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S03__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "271f8590ee6868cc3b54c040bb520c6dbaf62c63e70c03184515a3d599055c6a",
+          "bytes": 9953
+        },
+        "execution_protocol.json": {
+          "source_sha256": "922daadc4c8284d014ee6937dc5ae9ef44688710c4de4f7823d927831e1133cf",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "ed9ae56ff25784f8b51c3ef96ac858c97ed6a8139a725ff330229d7dc4924426",
+          "bytes": 252473
+        },
+        "contexts.jsonl": {
+          "source_sha256": "821218ef94dcd3a25150936b991b090974288d609d3b466fc4eb4c975701b06a",
+          "bytes": 4997712
+        },
+        "script.txt": {
+          "source_sha256": "6e861358a9ed1d3f7a537aa95c1d5ac02230eea284fb927a8d9e75fe927616df",
+          "bytes": 233478
+        },
+        "scores.json": {
+          "source_sha256": "88e0134a94ddab7f8ebfc86ec3ed255573064a41954d0c48671885272439af7e",
+          "bytes": 637
+        }
+      },
+      "scores": {
+        "logic": 63.64,
+        "quality": 62.84,
+        "creativity": 50.1
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S04",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S04__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "f0575ba8d3ad9716a3e8b69d9cefd864739b0cb9ab71d879c19071a7afe93ade",
+          "bytes": 9947
+        },
+        "execution_protocol.json": {
+          "source_sha256": "b50ea827d42e90807b8be6ddf1aba90107578fdaa53375e365106f628d31f7af",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "3a4c6f48f0d674dd00aadcda1dd5b9b18d26e6872b1fe8af239c82dac023b5f6",
+          "bytes": 263899
+        },
+        "contexts.jsonl": {
+          "source_sha256": "10f9839ebfd73a0b0598ab1ea12517fd5e14565a424045c9bbd05e6476d14742",
+          "bytes": 5335605
+        },
+        "script.txt": {
+          "source_sha256": "5139e64c0d63b8e58fa0f07119b94324b304fbe1fb38dda5c280b5c4ddd04eeb",
+          "bytes": 244799
+        },
+        "scores.json": {
+          "source_sha256": "c0adf6ece0234082a1688e79065f474068f51be6cff5aa60af67f807bfb23e41",
+          "bytes": 640
+        }
+      },
+      "scores": {
+        "logic": 57.98,
+        "quality": 59.31,
+        "creativity": 49.59
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S04",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S04__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "b33efafc5c84d21c3dcbbd2989bb3f758aec249c3cbd33092a7fb20716643ae3",
+          "bytes": 9947
+        },
+        "execution_protocol.json": {
+          "source_sha256": "813d68800bccc4a4774cd4de2b3266b57cf0f55f3dfe4e322dac44fc2efc7704",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "a7a55bd6fa0d6b60bc511bde620793a751d548d71cd3eac02020c6d1116d54d7",
+          "bytes": 271553
+        },
+        "contexts.jsonl": {
+          "source_sha256": "1128196acc6d8ca740a9287c4560faf8994d471748cdd6ac7cf80f8443e5f247",
+          "bytes": 5264243
+        },
+        "script.txt": {
+          "source_sha256": "694f1ab503d2fb440a54ee00efb55fd06e61be7f87fa617b8f1dfb56d618d951",
+          "bytes": 253786
+        },
+        "scores.json": {
+          "source_sha256": "3906c19e53bbb3d6dae9c6453ee0572a3b0b21b5e5e43f0c6b488e9de81f1509",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 62.11,
+        "quality": 59.08,
+        "creativity": 43.65
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S04",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S04__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "a99fbab5cc371accf12c0fd91ed8ed2b8e4085a0e9344ef1447b6014f881fbc2",
+          "bytes": 9947
+        },
+        "execution_protocol.json": {
+          "source_sha256": "cb2f6acea8be9226dbb5b158ba4cf311d883994360f6be998eb722596f71b74f",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "b01fe6c6cd4d406eda39919339d7046ceba27baef1f29623f288c4ea028c8d71",
+          "bytes": 258623
+        },
+        "contexts.jsonl": {
+          "source_sha256": "78a823b3b3930f42511c2c64df97f8a6ac17ab23482471cea59db5543013ae96",
+          "bytes": 5226012
+        },
+        "script.txt": {
+          "source_sha256": "bf10bb478d6d8570f5c49aabca9c3572bca1c8f3cec56df63d981324bd086f47",
+          "bytes": 240396
+        },
+        "scores.json": {
+          "source_sha256": "c91aa993b55b8679bbf24217ca74825b8d091e5a4b57f6330402a68f3a5673cf",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 68.51,
+        "quality": 71.22,
+        "creativity": 54.6
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S05",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S05__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "479d1fa26268df55373b559a78c6ad448451c98c0cf2d7536434f5ab396aa61f",
+          "bytes": 9949
+        },
+        "execution_protocol.json": {
+          "source_sha256": "8a6bfa390bf493f8ea6f1b1b3f34560b08650f338523335e85f5a858280db325",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "efd10cda9935105c735b76b61a4351380f11e23fcd677014ef6014162ddd8e0a",
+          "bytes": 296491
+        },
+        "contexts.jsonl": {
+          "source_sha256": "9ea03992084f6bd239798d6224c6423ef1f94e6399ec37e80ee575a0bf4348dd",
+          "bytes": 6011695
+        },
+        "script.txt": {
+          "source_sha256": "84c67eb59a41aa189b6f254f766abcb442df2a4ea9de35cc8a4119b9865b81d5",
+          "bytes": 278172
+        },
+        "scores.json": {
+          "source_sha256": "e5335ea4fb525352aaaab53215a8c0cc4041fb13d093c5befb37e7a7db8fd080",
+          "bytes": 635
+        }
+      },
+      "scores": {
+        "logic": 39.0,
+        "quality": 63.98,
+        "creativity": 43.1
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S05",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S05__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "accb5de5c8286cc2d6dfcd5ec5bd5f7e98c7415e3de5848455fcce644322b2b5",
+          "bytes": 9944
+        },
+        "execution_protocol.json": {
+          "source_sha256": "7bca8a9411006c164563a602644807378cc30397b8df152c2d61fb14116f0d65",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "90007607d234d938768df9d95d3828d2671f5d0f68a7903b68ad78f0ea430eda",
+          "bytes": 269680
+        },
+        "contexts.jsonl": {
+          "source_sha256": "11d73c943ca8628540eaead254fd45f6f31ff23543a0bd631553508bee88c602",
+          "bytes": 5315015
+        },
+        "script.txt": {
+          "source_sha256": "43cf8cce886d3f5d9a3438692de98d5b39bf1e2190f5559e3418f7b80aa9b2e8",
+          "bytes": 251936
+        },
+        "scores.json": {
+          "source_sha256": "2cb7b06227764141b0703c9a1543112e5fb649bfcbc25bd7b0eac48eec29323e",
+          "bytes": 639
+        }
+      },
+      "scores": {
+        "logic": 52.02,
+        "quality": 58.83,
+        "creativity": 41.34
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S05",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S05__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "24b16d0c385db21f166f83983edda7a572d07ea7a229085ae18b311066e019d6",
+          "bytes": 9950
+        },
+        "execution_protocol.json": {
+          "source_sha256": "87bc3cd99e17fa33ee01a1fde78787efaf4d95783348f4878bd41ff0c51ce65b",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "438b68d295b96de814070d6bb7076017afc2f546573612eb755464cbc16b7124",
+          "bytes": 302624
+        },
+        "contexts.jsonl": {
+          "source_sha256": "ed522c9f771044a874f579bfe76e5bb73439e65d636844c867c7d58e82314562",
+          "bytes": 6029883
+        },
+        "script.txt": {
+          "source_sha256": "7b6e1e0f5fa6ff78daeb5169928db79c819c715d67d1a4fb5a150b128c846635",
+          "bytes": 284452
+        },
+        "scores.json": {
+          "source_sha256": "48a5a298504c13ab7054f8f08270fa32f567d3d9e060234c118f79e811616b0f",
+          "bytes": 636
+        }
+      },
+      "scores": {
+        "logic": 37.9,
+        "quality": 53.15,
+        "creativity": 36.05
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S06",
+      "run": "R01",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S06__R01",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "4abbfa812c51dfcc2481c1e8a369a354f77418eb3f454d9629ffb0f2f5885260",
+          "bytes": 9950
+        },
+        "execution_protocol.json": {
+          "source_sha256": "8ecbffc73e0a8a6f5a1b98b3c01706e8b492f0270e1354e543922f4a91aec216",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "e59ae8150af76b88f05a3bc6f8307d49b572ef7d7437f5c18e98930917988973",
+          "bytes": 308526
+        },
+        "contexts.jsonl": {
+          "source_sha256": "1c5e2703ccca33a199859fee395d6d39fe90c4a0bd4dfef84d8a9db8d4d23564",
+          "bytes": 5815449
+        },
+        "script.txt": {
+          "source_sha256": "4f93ef71be8c91936cdb06ffd48168e1dfdbf8c60e91ec54496cecca40a9927b",
+          "bytes": 290070
+        },
+        "scores.json": {
+          "source_sha256": "821ce3ef0536a7f8f461484d709c1a10a4cb881aabeb9a73650a4d0ff0dbb482",
+          "bytes": 639
+        }
+      },
+      "scores": {
+        "logic": 55.66,
+        "quality": 62.98,
+        "creativity": 43.15
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S06",
+      "run": "R02",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S06__R02",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "0df04636fd898d8c2345cc0fb9d2828f080851e5ddd635800370d419e95386d0",
+          "bytes": 9945
+        },
+        "execution_protocol.json": {
+          "source_sha256": "1e6ed33f4ce6e011cc74a00b8dfa8aefa4f9b9ae32357edbeb0a82a1777ccbe6",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "97c13bd7b91a27089f63c1b917b0b9a26dd53d08be0d5f78b8ba5297ee6a42ec",
+          "bytes": 279793
+        },
+        "contexts.jsonl": {
+          "source_sha256": "9f528f45634058f71b20b0c2378cd941cd0f379fd95fe347006fdf052f549363",
+          "bytes": 5281591
+        },
+        "script.txt": {
+          "source_sha256": "3e858d54f444258d282acbe23511b6a75fe4859bf41625e9a870248f400f64b9",
+          "bytes": 262030
+        },
+        "scores.json": {
+          "source_sha256": "edc3f28f978c397d665146cce356759763552c451ef9bcde051dd95703f7d540",
+          "bytes": 639
+        }
+      },
+      "scores": {
+        "logic": 54.91,
+        "quality": 62.88,
+        "creativity": 41.65
+      }
+    },
+    {
+      "arm": "baseline",
+      "story": "S06",
+      "run": "R03",
+      "episodes": 40,
+      "source_directory": "/inspire/hdd/global_user/wangqiqi-CZXS25210124/Tencent-drama/runs/qwen36_fullmethod_vs_bare_40ep/bare/S06__R03",
+      "files": {
+        "jobs.jsonl": {
+          "source_sha256": "edd40fd4cd911b61c3b7c78a94585ffc4716fa71135bae11c5f8df9c2dc3f4a3",
+          "bytes": 9953
+        },
+        "execution_protocol.json": {
+          "source_sha256": "9bb8b90010af1e64d042662a10d6a6a8ff0a57f430ad99f1908fc6f6b2398e24",
+          "bytes": 240
+        },
+        "generations.jsonl": {
+          "source_sha256": "befcf0c95dcc19e7613647a3e6243190f7675d7be52eda97ea0031a9d6fe165b",
+          "bytes": 249170
+        },
+        "contexts.jsonl": {
+          "source_sha256": "7db39f76e2b7ae5adadd745a06fdf8caf6db55026bcbee633f60781637a87160",
+          "bytes": 4856564
+        },
+        "script.txt": {
+          "source_sha256": "55f792d648e8654dcc63b3634b647c441d77712fda12c35c4caad96badebc05d",
+          "bytes": 231717
+        },
+        "scores.json": {
+          "source_sha256": "f4674ff909ddd1e60928c7d935187fa40adbb248a5157834bd04ac384911a407",
+          "bytes": 638
+        }
+      },
+      "scores": {
+        "logic": 54.21,
+        "quality": 62.18,
+        "creativity": 42.4
+      }
+    }
+  ]
+}

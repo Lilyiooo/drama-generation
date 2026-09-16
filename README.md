@@ -20,6 +20,14 @@
 
 这些是同一批 6 个故事、3 个 run 的历史实验均值，不是对任意新故事的性能保证。
 
+## 仓库内的历史输出
+
+`outputs/historical_40ep/` 同时收录上述已完成实验的当前方法（`method`）和裸模型（`baseline`），每组 S01–S06 × R01–R03 × 40 集。`baseline` 生成时提供了此前**全部集的剧本原文**，不是只有大纲。
+
+每条轨迹均有逐集 `generations.jsonl`、实际展开的 `contexts.jsonl`、方便阅读的 `script.txt`、固定 Qwen3.8 的 `scores.json`、`jobs.jsonl` 与 `execution_protocol.json`。顶层 `manifest.json` 记录原路径、文件 SHA-256、集数和两组均分。生成阶段的其他中间日志、完整评测工作目录和模型权重**没有上传**；需要复核评分细节时请使用原始 `runs/qwen36_fullmethod_vs_bare_40ep/`。
+
+这些历史输出是只读研究材料；新的运行结果仍写入并忽略 `outputs/qwen36_full_best_v1/`，不会把不断增长的剧本或日志意外推送到 GitHub。
+
 ## 为什么这是默认版本
 
 这里的“最佳”指当前有完整 40 集成品和固定评测证据的版本。`qwen36_gate_branch_v2` 的新门控提示词只完成了短分支生成，尚未完成评分，而且两个分支使用过引用约束补跑，因此没有合入这个默认快照。等配对评测证明它稳定更好后，应作为新版本单独冻结，不能覆盖本目录。
