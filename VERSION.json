@@ -1,0 +1,18 @@
+{
+  "bundle_version": "2026-09-16.validated-v1",
+  "method_condition": "S1_lifecycle_v4_obligation_retrieval",
+  "generation_model": "Qwen3.6-27B",
+  "extraction_model": "Qwen3.6-27B",
+  "thinking": false,
+  "historical_source_fingerprint": "3717ec06b0d2d613d33b1da66fba63b9998a866422cec1baaac9d5ce0ab609df",
+  "historical_config_hash": "1e39ab4a63442523",
+  "historical_evaluation": {
+    "model": "Qwen3.8-27B",
+    "method_trajectories": 18,
+    "episodes_per_trajectory": 40,
+    "method_mean": {"logic": 70.2206, "quality": 79.8061, "creativity": 59.3189},
+    "bare_full_history_mean": {"logic": 58.0150, "quality": 61.9650, "creativity": 44.5806}
+  },
+  "candidate_gate_included": false,
+  "candidate_gate_reason": "qwen36_gate_branch_v2 has complete short generations but no Qwen3.8 scores at snapshot time"
+}

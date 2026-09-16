@@ -1,0 +1,1079 @@
+[
+  {
+    "memory_id": "S01_HD_01",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "INFO_GAIN",
+    "move_id": "INFO_GAIN",
+    "applicable_situation": "调查需要推进但单一证据不足",
+    "narrative_strategy": "让角色用两个独立记录交叉核验，只确认交集并保留证据缺口。",
+    "expected_effect": "产生可靠推进且维持后续解释空间",
+    "risks": [
+      "核验过程可能偏技术化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HD_02",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.91,
+    "cluster_id": "INFO_REFRAME",
+    "move_id": "INFO_REFRAME",
+    "applicable_situation": "线索可能被过早解释为具体嫌疑",
+    "narrative_strategy": "并列两个可检验解释，让不同人物分别提出证据需求并在集尾保留竞争。",
+    "expected_effect": "防止调查过早锁死",
+    "risks": [
+      "解释过多会分散目标"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HD_03",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "需要延缓信息取得且不能依赖巧合",
+    "narrative_strategy": "用合法权限、设备损坏或复核流程构成阻碍，迫使主角改变取证路径。",
+    "expected_effect": "由人物行动推动延迟与选择",
+    "risks": [
+      "流程描写可能拖慢节奏"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HD_04",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "INFO_REFRAME",
+    "move_id": "INFO_REFRAME",
+    "applicable_situation": "需要转折但不宜引入新秘密",
+    "narrative_strategy": "让新发现改变旧线索含义，同时明确哪些旧事实仍然成立。",
+    "expected_effect": "形成因果连续的转折",
+    "risks": [
+      "重读依据不足会显得牵强"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HD_05",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "CAPACITY_LOSS",
+    "move_id": "CAPACITY_LOSS",
+    "applicable_situation": "取证方案需要被现实条件检验",
+    "narrative_strategy": "让一次取证行动因合法程序、时限或设备条件而失败，使某项证据永久不可得，再由人物改变取证路径而非放弃目标。",
+    "expected_effect": "通过后果推动调查演进且不依赖巧合",
+    "risks": [
+      "失败过密会削弱推进感"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HH_01",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.94,
+    "cluster_id": "INFO_GAIN",
+    "move_id": "INFO_GAIN",
+    "applicable_situation": "设备与记录均存在不完整信息",
+    "narrative_strategy": "先读取设备时间，再与门禁日志交叉比对，以一致区间形成下一步核查路径。",
+    "expected_effect": "清晰、可靠地推进调查",
+    "risks": [
+      "连续使用会形成固定核验节奏"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HH_02",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "INFO_GAIN",
+    "move_id": "INFO_GAIN",
+    "applicable_situation": "人物对一条技术线索产生分歧",
+    "narrative_strategy": "要求双方各找一个独立记录，交叉比对后只接受重合部分。",
+    "expected_effect": "兼顾人物冲突与证据边界",
+    "risks": [
+      "容易重复双证据结构"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_HH_03",
+    "story_id": "S01",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "INFO_GAIN",
+    "move_id": "INFO_GAIN",
+    "applicable_situation": "集尾需要可继承的调查钩子",
+    "narrative_strategy": "让交叉核验暴露一个狭窄缺口，将缺口转成下一集的核查对象。",
+    "expected_effect": "钩子明确且不越过证据边界",
+    "risks": [
+      "钩子机制趋同"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_LOW_01",
+    "story_id": "S01",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.28,
+    "cluster_id": "PREMATURE_REVEAL",
+    "move_id": "PREMATURE_REVEAL",
+    "applicable_situation": "调查需要快速制造强钩子",
+    "narrative_strategy": "让残缺记录直接出现身份缩写，人物据此锁定具体管理者。",
+    "expected_effect": "短期推进强烈",
+    "risks": [
+      "证据不足",
+      "过早锁定答案"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S01_LOW_02",
+    "story_id": "S01",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.25,
+    "cluster_id": "COINCIDENTAL_DISCOVERY",
+    "move_id": "COINCIDENTAL_DISCOVERY",
+    "applicable_situation": "调查暂时没有突破",
+    "narrative_strategy": "让角色偶然收到关键截图或陌生证人的完整提示。",
+    "expected_effect": "迅速跨过调查障碍",
+    "risks": [
+      "巧合推进",
+      "主角能动性弱"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HD_01",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.94,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "关系松动需要转为可执行合作",
+    "narrative_strategy": "把让步写成责任人、时间、交接方式和失败补救，同时保留情感旧怨。",
+    "expected_effect": "形成可继承状态而非虚假和解",
+    "risks": [
+      "安排过细会削弱含蓄感"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HD_02",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.91,
+    "cluster_id": "BOND_LOSS",
+    "move_id": "BOND_LOSS",
+    "applicable_situation": "双方围绕责任重复争执",
+    "narrative_strategy": "让具体任务迫使双方说出底线，并用行动选择而非和解台词结束对峙。",
+    "expected_effect": "冲突升级同时产生新状态",
+    "risks": [
+      "对峙过强可能偏离克制基调"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HD_03",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "CAPACITY_LOSS",
+    "move_id": "CAPACITY_LOSS",
+    "applicable_situation": "已有照护安排需要被检验",
+    "narrative_strategy": "让安排在一个有限环节失败，明确失败原因与代价，再由人物修订而非推翻合作。",
+    "expected_effect": "通过后果推动关系与机制升级",
+    "risks": [
+      "失败过大可能破坏一致性"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HD_04",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "人物回避分工且已有现实期限",
+    "narrative_strategy": "使用既有复诊或出院期限迫使选择，但让责任方案仍由姐弟提出。",
+    "expected_effect": "提高节奏且保留人物能动性",
+    "risks": [
+      "频繁使用期限会公式化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HH_01",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.95,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "照护责任尚未落地",
+    "narrative_strategy": "要求人物写下责任人、时间和交接方式，并保留一项未解决边界。",
+    "expected_effect": "将关系变化稳定写入后续状态",
+    "risks": [
+      "连续使用会让每集都以清单收束"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HH_02",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "口头缓和无法支持下一步行动",
+    "narrative_strategy": "用一项带期限的具体承诺替代情绪表白，并明确未履行的补救责任。",
+    "expected_effect": "保证关系推进可观察可执行",
+    "risks": [
+      "收束方式容易重复"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_HH_03",
+    "story_id": "S02",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "集尾需要留下可继承的合作状态",
+    "narrative_strategy": "让双方完成一次明确分工，以行动确认但不要求情感和解。",
+    "expected_effect": "局部质量高且状态清晰",
+    "risks": [
+      "每集都用分工推进会压缩选择"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_LOW_01",
+    "story_id": "S02",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.27,
+    "cluster_id": "VAGUE_RECONCILIATION",
+    "move_id": "VAGUE_RECONCILIATION",
+    "applicable_situation": "姐弟争执后需要表现关系松动",
+    "narrative_strategy": "只写语气放软、共同沉默或一句以后再说，不确定责任、时间和交接。",
+    "expected_effect": "营造含蓄温情",
+    "risks": [
+      "无可继承变化",
+      "后续重复争执"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_LOW_02",
+    "story_id": "S02",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.24,
+    "cluster_id": "EXTERNAL_RESCUE",
+    "move_id": "EXTERNAL_RESCUE",
+    "applicable_situation": "家庭分工陷入僵局",
+    "narrative_strategy": "让医生或父亲直接宣布最合理分工，姐弟被动接受。",
+    "expected_effect": "快速解决当前冲突",
+    "risks": [
+      "人物失去能动性",
+      "冲突被外部代解"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S02_LOW_03",
+    "story_id": "S02",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.26,
+    "cluster_id": "COINCIDENTAL_DISCOVERY",
+    "move_id": "COINCIDENTAL_DISCOVERY",
+    "applicable_situation": "照护安排缺少推进契机",
+    "narrative_strategy": "用突然出现的便利资源或偶然取消的冲突替人物解决分工难题。",
+    "expected_effect": "快速缓解当前压力",
+    "risks": [
+      "人物选择被架空",
+      "后续状态缺乏因果基础"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HD_01",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "OPTION_LOCK",
+    "move_id": "OPTION_LOCK",
+    "applicable_situation": "处境要求做出无法撤回的取舍",
+    "narrative_strategy": "让人物实际卖掉、放弃或拆除某物，并明确这一步永久关闭了哪一种未来可能，不给补偿性好运。",
+    "expected_effect": "以不可逆代价推进，且后续状态可继承",
+    "risks": [
+      "连续使用会让每集都以损失收束"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HD_02",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.91,
+    "cluster_id": "CAPACITY_LOSS",
+    "move_id": "CAPACITY_LOSS",
+    "applicable_situation": "既有计划需要被现实条件检验",
+    "narrative_strategy": "让身体、牲畜或器物在具体劳作中受损，产生可追踪后果，再由人物修订计划而非推翻目标。",
+    "expected_effect": "通过后果推动方案演进",
+    "risks": [
+      "损失过大会破坏一致性"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HD_03",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "BOND_REFRAME",
+    "move_id": "BOND_REFRAME",
+    "applicable_situation": "责任分配长期悬置且争执重复",
+    "narrative_strategy": "不增减信任，而是重新划定谁负责哪一段、谁明确拒绝承担，并保留各自不满。",
+    "expected_effect": "关系变化可观察且不虚假和解",
+    "risks": [
+      "边界谈判过细会削弱情感张力"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HD_04",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "INFO_REFRAME",
+    "move_id": "INFO_REFRAME",
+    "applicable_situation": "需要转折但不宜引入新秘密",
+    "narrative_strategy": "让人物从旁人处拼出旧事的一部分，据此改变对亲人的判断，同时不改变任何客观条件。",
+    "expected_effect": "形成因果连续的转折",
+    "risks": [
+      "拼合依据不足会显得牵强"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HH_01",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.94,
+    "cluster_id": "OPTION_LOCK",
+    "move_id": "OPTION_LOCK",
+    "applicable_situation": "集末需要留下不可逆的推进",
+    "narrative_strategy": "以一次实际出售或放弃收束本集，明确被关闭的选项，并把剩余选项数量写清。",
+    "expected_effect": "推进清晰且状态可继承",
+    "risks": [
+      "连续使用会形成固定的损失节奏"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HH_02",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "OPTION_LOCK",
+    "move_id": "OPTION_LOCK",
+    "applicable_situation": "人物回避选择且期限临近",
+    "narrative_strategy": "用既有期限迫使人物完成一次不可撤回的取舍，方案仍由人物自己提出。",
+    "expected_effect": "提高节奏且保留人物能动性",
+    "risks": [
+      "容易重复取舍结构"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_HH_03",
+    "story_id": "S03",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "OPTION_LOCK",
+    "move_id": "OPTION_LOCK",
+    "applicable_situation": "多方争执需要落到实处",
+    "narrative_strategy": "让争执以一次实际处置结束，明确谁的主张被放弃，并留下一项未结算的代价。",
+    "expected_effect": "冲突转化为可继承结果",
+    "risks": [
+      "收束方式趋同"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_LOW_01",
+    "story_id": "S03",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.26,
+    "cluster_id": "EXTERNAL_RESCUE",
+    "move_id": "EXTERNAL_RESCUE",
+    "applicable_situation": "家庭僵局需要快速化解",
+    "narrative_strategy": "让政策补贴突然加码或干事额外通融，直接解决资金与去留难题。",
+    "expected_effect": "迅速缓解压力",
+    "risks": [
+      "人物失去能动性",
+      "代价被外部抹平"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S03_LOW_02",
+    "story_id": "S03",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.24,
+    "cluster_id": "COINCIDENTAL_DISCOVERY",
+    "move_id": "COINCIDENTAL_DISCOVERY",
+    "applicable_situation": "转场缺少推进契机",
+    "narrative_strategy": "让人物偶然发现一片未被禁牧的好草场或恰好遇到愿意收高价的买主。",
+    "expected_effect": "快速跨过障碍",
+    "risks": [
+      "巧合推进",
+      "损失不再具体"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HD_01",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "CAPACITY_GAIN",
+    "move_id": "CAPACITY_GAIN",
+    "applicable_situation": "作品需要实际前进一档",
+    "narrative_strategy": "让人物完成一道具体工序并可被验证，同时写明为此付出的时间或体力代价。",
+    "expected_effect": "进度可累积且代价可见",
+    "risks": [
+      "工序描写可能偏技术化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HD_02",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "OPTION_LOCK",
+    "move_id": "OPTION_LOCK",
+    "applicable_situation": "期限压力下无法保全全部内容",
+    "narrative_strategy": "让人物主动舍弃某一整段并明确不再追回，把腾出的资源投向核心部分。",
+    "expected_effect": "取舍具体且不可逆",
+    "risks": [
+      "频繁舍弃会削弱成型感"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HD_03",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.91,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "多方分歧需要落成可执行安排",
+    "narrative_strategy": "把让步写成署名方式、教学责任与物件归属，并保留一项未解决的分歧。",
+    "expected_effect": "关系变化稳定写入后续状态",
+    "risks": [
+      "安排过细会削弱含蓄"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HD_04",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "INFO_REFRAME",
+    "move_id": "INFO_REFRAME",
+    "applicable_situation": "缺失内容需要新的理解而非新材料",
+    "narrative_strategy": "让人物重读既有残稿的边缘信息，改变对缺失部分的理解，但仍无法覆盖全部缺口。",
+    "expected_effect": "转折建立在既有材料之上",
+    "risks": [
+      "重读依据不足会牵强"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HH_01",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.95,
+    "cluster_id": "CAPACITY_GAIN",
+    "move_id": "CAPACITY_GAIN",
+    "applicable_situation": "集末需要可继承的进度",
+    "narrative_strategy": "以完成一道工序收束本集，并把下一道工序设为钩子。",
+    "expected_effect": "进度清晰、钩子明确",
+    "risks": [
+      "每集都以工序推进收束会公式化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HH_02",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "CAPACITY_GAIN",
+    "move_id": "CAPACITY_GAIN",
+    "applicable_situation": "人物对做法产生分歧",
+    "narrative_strategy": "让双方各做一次小范围试验，以实际效果决定采用哪一种手法。",
+    "expected_effect": "兼顾冲突与技艺推进",
+    "risks": [
+      "容易重复试验结构"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_HH_03",
+    "story_id": "S04",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "CAPACITY_GAIN",
+    "move_id": "CAPACITY_GAIN",
+    "applicable_situation": "学徒需要成长但不能跳跃",
+    "narrative_strategy": "让学徒独立完成一个有限环节，质量可查，并暴露下一处不足。",
+    "expected_effect": "成长可观察且有边界",
+    "risks": [
+      "成长节奏趋同"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_LOW_01",
+    "story_id": "S04",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.27,
+    "cluster_id": "EXTERNAL_RESCUE",
+    "move_id": "EXTERNAL_RESCUE",
+    "applicable_situation": "复原陷入停滞",
+    "narrative_strategy": "让一本完整秘本或一位隐藏老艺人突然出现，直接补齐所有缺失段落。",
+    "expected_effect": "迅速解决核心难题",
+    "risks": [
+      "主角能动性被架空",
+      "取舍失去意义"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S04_LOW_02",
+    "story_id": "S04",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.25,
+    "cluster_id": "PREMATURE_REVEAL",
+    "move_id": "PREMATURE_REVEAL",
+    "applicable_situation": "需要快速确定方向",
+    "narrative_strategy": "让失语的师父以某种奇迹方式明确表态，一次性锁定所有争议。",
+    "expected_effect": "短期推进强烈",
+    "risks": [
+      "不可知性被消解",
+      "伦理张力消失"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HD_01",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "需要收紧主角的可行动空间",
+    "narrative_strategy": "用既有制度期限、审计公告或资金链条关闭一条退路，使下一步选择更少而非更多。",
+    "expected_effect": "压力递增且完全来自既有条件",
+    "risks": [
+      "连续使用会让节奏单一"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HD_02",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.91,
+    "cluster_id": "BOND_LOSS",
+    "move_id": "BOND_LOSS",
+    "applicable_situation": "隐瞒逼近被察觉的临界点",
+    "narrative_strategy": "让具体凭证或流程引发一次正面冲突，以行动选择而非解释收场，并留下无法收回的话。",
+    "expected_effect": "冲突升级同时产生新状态",
+    "risks": [
+      "对峙过强会偏离克制基调"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HD_03",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.91,
+    "cluster_id": "INFO_REFRAME",
+    "move_id": "INFO_REFRAME",
+    "applicable_situation": "主角需要认知转变但处境不变",
+    "narrative_strategy": "让主角重读自己最初的那份材料，认清起点已无法辩解，该认知只改变她的选择而非客观条件。",
+    "expected_effect": "内在变化可观察且不解困",
+    "risks": [
+      "内省过多会拖慢节奏"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HD_04",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "CAPACITY_LOSS",
+    "move_id": "CAPACITY_LOSS",
+    "applicable_situation": "既有掩盖手段需要被检验",
+    "narrative_strategy": "让一次掩盖在具体环节失效，造成他人可见的损失，再由主角以更大代价补救。",
+    "expected_effect": "通过后果推动下行",
+    "risks": [
+      "失败过密会失去可信度"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HH_01",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.94,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "集末需要关闭一条退路",
+    "narrative_strategy": "以一条退路的明确关闭收束本集，并写清主角剩下几种选择。",
+    "expected_effect": "下行轨迹清晰可继承",
+    "risks": [
+      "每集都以退路关闭收束会公式化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HH_02",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "主角试图拖延",
+    "narrative_strategy": "用既有期限迫使她当集做出动作，且该动作使后续空间进一步缩小。",
+    "expected_effect": "节奏紧凑且保留她的选择",
+    "risks": [
+      "容易重复期限结构"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_HH_03",
+    "story_id": "S05",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "多方压力需要汇聚",
+    "narrative_strategy": "让两条既有压力落到同一天，迫使她放弃其中一方，并明确被放弃者的损失。",
+    "expected_effect": "压力具体且代价可见",
+    "risks": [
+      "汇聚手法趋同"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_LOW_01",
+    "story_id": "S05",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.25,
+    "cluster_id": "EXTERNAL_RESCUE",
+    "move_id": "EXTERNAL_RESCUE",
+    "applicable_situation": "资金缺口无法填补",
+    "narrative_strategy": "让意外之财、亲友馈赠或政策补助突然出现，直接补上缺口。",
+    "expected_effect": "迅速缓解压力",
+    "risks": [
+      "下行逻辑被打断",
+      "代价消失"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S05_LOW_02",
+    "story_id": "S05",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.24,
+    "cluster_id": "VAGUE_RECONCILIATION",
+    "move_id": "VAGUE_RECONCILIATION",
+    "applicable_situation": "隐瞒被察觉后需要缓和",
+    "narrative_strategy": "只写语气软化、长久沉默或一句以后再说，不确定责任、赔付与后续安排。",
+    "expected_effect": "营造含蓄氛围",
+    "risks": [
+      "无可继承变化",
+      "后续重复同一冲突"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HD_01",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "CAPACITY_GAIN",
+    "move_id": "CAPACITY_GAIN",
+    "applicable_situation": "能力问题需要实际推进",
+    "narrative_strategy": "让人物在具体训练或比赛环节前进一档，进步幅度有限且可被观察，同时暴露下一处短板。",
+    "expected_effect": "成长可信且不跳跃",
+    "risks": [
+      "训练描写可能程式化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HD_02",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "位置对立需要落成可执行安排",
+    "narrative_strategy": "把让步写成球权分配、出场限制与队务责任，并保留一项未解决的分歧。",
+    "expected_effect": "关系变化可执行可继承",
+    "risks": [
+      "安排过细会削弱情绪"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HD_03",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "OPTION_LOSS",
+    "move_id": "OPTION_LOSS",
+    "applicable_situation": "需要外部压力但不能替队伍决策",
+    "narrative_strategy": "用既有名单期限或成绩要求收窄可选方案，方案仍由队员自己提出。",
+    "expected_effect": "提高节奏且保留能动性",
+    "risks": [
+      "频繁使用期限会公式化"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HD_04",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_diverse"
+    ],
+    "quality_score": 0.9,
+    "cluster_id": "INFO_REFRAME",
+    "move_id": "INFO_REFRAME",
+    "applicable_situation": "失败归因需要改变但无新数据",
+    "narrative_strategy": "让人物重看既有录像，把归因从个人能力转向战术分工，且不立即解决问题。",
+    "expected_effect": "归因转变有据且不速成",
+    "risks": [
+      "重读依据不足会牵强"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HH_01",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.94,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "集末需要可继承的协作状态",
+    "narrative_strategy": "让双方完成一次明确分工，以行动确认，不要求情感和解。",
+    "expected_effect": "状态清晰且局部质量高",
+    "risks": [
+      "每集都用分工收束会压缩选择"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HH_02",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.93,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "口头缓和无法支撑下一步",
+    "narrative_strategy": "用一项带期限的具体承诺替代表白，并写明未履行时的补救责任。",
+    "expected_effect": "关系推进可观察可执行",
+    "risks": [
+      "收束方式容易重复"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_HH_03",
+    "story_id": "S06",
+    "pool_tags": [
+      "high_homogeneous"
+    ],
+    "quality_score": 0.92,
+    "cluster_id": "BOND_LOCK",
+    "move_id": "BOND_LOCK",
+    "applicable_situation": "队内责任尚未落地",
+    "narrative_strategy": "要求写下责任人、出场限制与交接方式，并保留一项未解决的边界。",
+    "expected_effect": "把关系变化写入后续状态",
+    "risks": [
+      "连续使用会让每集以约定收束"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_LOW_01",
+    "story_id": "S06",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.26,
+    "cluster_id": "EXTERNAL_RESCUE",
+    "move_id": "EXTERNAL_RESCUE",
+    "applicable_situation": "球队僵局需要化解",
+    "narrative_strategy": "让教练突然回归或家长会直接指定战术与首发，队员被动接受。",
+    "expected_effect": "快速解决当前冲突",
+    "risks": [
+      "人物失去能动性",
+      "冲突被外部代解"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  },
+  {
+    "memory_id": "S06_LOW_02",
+    "story_id": "S06",
+    "pool_tags": [
+      "low"
+    ],
+    "quality_score": 0.24,
+    "cluster_id": "VAGUE_RECONCILIATION",
+    "move_id": "VAGUE_RECONCILIATION",
+    "applicable_situation": "队内对立后需要表现关系松动",
+    "narrative_strategy": "只写一次谈心后彼此理解，不确定球权、出场与责任分配。",
+    "expected_effect": "营造温情",
+    "risks": [
+      "无可继承变化",
+      "后续重复同一对立"
+    ],
+    "source_type": "curated",
+    "source_episode": null,
+    "parent_memory_ids": []
+  }
+]

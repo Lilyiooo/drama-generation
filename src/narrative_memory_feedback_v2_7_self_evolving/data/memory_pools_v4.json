@@ -1,0 +1,5507 @@
+[
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_GAIN_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "INDEPENDENT_SOURCE_CONVERGENCE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "actionable_unknown",
+      "multiple_information_sources"
+    ],
+    "requires_any": [],
+    "forbids_any": [
+      "core_problem_already_resolved"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "需要取得可靠进展，但任何单一信息来源都不足以支持判断。",
+    "operator_steps": [
+      "选择两个形成方式彼此独立的既有信息来源。",
+      "让人物通过具体行动分别核验，而不是在对话中直接汇总。",
+      "只确认两者交集，将不一致部分转成后续可行动的问题。"
+    ],
+    "expected_state_change": "新增一个边界明确的已知事实，并把剩余缺口保留为未解决目标。",
+    "observable_evidence": [
+      "两次独立核验行动",
+      "明确区分交集与冲突部分"
+    ],
+    "risks": [
+      "核验过程可能变成说明性流程",
+      "连续使用会形成固定双证据节奏"
+    ],
+    "abort_conditions": [
+      "两个来源实际来自同一上游",
+      "核验会越过硬锚点"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_GAIN_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "PROGRESS",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_GAIN_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "ACTION_PRODUCED_INFORMATION",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "actionable_unknown",
+      "action_can_test_belief"
+    ],
+    "requires_any": [],
+    "forbids_any": [
+      "agency_unavailable"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "人物需要知道某件事，且答案可以由一次有风险的行动产生。",
+    "operator_steps": [
+      "把待确认判断改写成一次可观察的行动测试。",
+      "让人物承担测试成本，并允许既有阻力改变测试过程。",
+      "依据行动结果更新认识，同时保留测试无法覆盖的部分。"
+    ],
+    "expected_state_change": "信息由人物行动产生，并同步留下行动成本或新的限制。",
+    "observable_evidence": [
+      "人物主动实施测试",
+      "结果能够区分原有判断"
+    ],
+    "risks": [
+      "测试设计过于便利",
+      "行动只验证结论而没有真实风险"
+    ],
+    "abort_conditions": [
+      "人物没有实施测试的能力",
+      "测试结果不应在当前阶段确认"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_GAIN_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "TEST",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_LOSS_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "SOURCE_DEGRADATION_BY_ACTION",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "vulnerable_information_source"
+    ],
+    "requires_any": [
+      "actionable_unknown",
+      "relationship_boundary_active"
+    ],
+    "forbids_any": [
+      "core_problem_already_resolved"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "已有信息源会因人物当前选择或冲突而永久降低可用性。",
+    "operator_steps": [
+      "选定一个已经建立且对后续有价值的信息源。",
+      "让人物的选择、失误或冲突具体损害其完整性或可信度。",
+      "保留已确认部分，让缺失部分迫使人物改变后续路径。"
+    ],
+    "expected_state_change": "一个信息来源永久失效或降级，原计划无法再取得完整答案。",
+    "observable_evidence": [
+      "损害由可追踪行动造成",
+      "后续获取能力明确下降"
+    ],
+    "risks": [
+      "任意毁掉材料以制造悬念",
+      "连续剥夺信息导致停滞"
+    ],
+    "abort_conditions": [
+      "信息源此前从未建立",
+      "损失不会改变任何选择"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_LOSS_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "INFORMATION_OPEN"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_LOSS_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "ACCESS_WINDOW_CLOSURE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "access_window_limited"
+    ],
+    "requires_any": [
+      "active_deadline",
+      "relationship_boundary_active"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "信息仍然存在，但接触它的时间、权限或合作窗口正在关闭。",
+    "operator_steps": [
+      "明确当前接触信息的既有条件和窗口。",
+      "让人物的优先级选择或关系行为消耗这个窗口。",
+      "窗口关闭后只保留更昂贵的求证方向，不凭空补回信息。"
+    ],
+    "expected_state_change": "人物失去一条直接求证路径，并承担此前选择造成的认知后果。",
+    "observable_evidence": [
+      "窗口关闭前已有明确条件",
+      "失去接触是人物选择的后果"
+    ],
+    "risks": [
+      "只用期限台词制造紧迫",
+      "立即出现便利替代"
+    ],
+    "abort_conditions": [
+      "访问条件从未建立",
+      "可无成本重新获得同等访问"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_LOSS_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_REFRAME_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "COMPETING_EXPLANATIONS",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "competing_explanations"
+    ],
+    "requires_any": [
+      "actionable_unknown",
+      "answer_not_yet_earned"
+    ],
+    "forbids_any": [
+      "sufficient_evidence_chain"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "同一批事实支持多个解释，当前证据不足以正当排除其中任何一个。",
+    "operator_steps": [
+      "让不同立场各提出一个能解释现有事实的判断。",
+      "为每个判断指定不同的可检验预测，而非重复争论动机。",
+      "本集只完成其中一项检验，并据结果调整各解释权重。"
+    ],
+    "expected_state_change": "解释空间被重新排序，但核心答案仍保持开放。",
+    "observable_evidence": [
+      "至少两个解释各有事实依据",
+      "解释对应不同下一步行动"
+    ],
+    "risks": [
+      "解释过多稀释目标",
+      "人物变成观点传声筒"
+    ],
+    "abort_conditions": [
+      "已有材料足以排除一个解释",
+      "硬锚点要求局部锁定"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_REFRAME_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "TEST",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_REFRAME_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "OLD_FACT_CONTEXT_SHIFT",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "existing_fact_reinterpretable"
+    ],
+    "requires_any": [
+      "relationship_basis_unstable",
+      "prior_attempt_failed",
+      "competing_explanations"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "不宜引入新秘密，但已有事实可因顺序、关系或用途变化获得新含义。",
+    "operator_steps": [
+      "选择一个此前已确认但解释尚未固定的事实。",
+      "通过当前行动暴露它与另一既有状态之间的新关系。",
+      "明确哪些旧结论仍成立，哪些判断必须修正。"
+    ],
+    "expected_state_change": "不增加隐藏事实，只改变人物对既有材料的因果理解和选择。",
+    "observable_evidence": [
+      "被重读事实此前真实出现",
+      "新解释由当前行动触发"
+    ],
+    "risks": [
+      "依据不足像临时反转",
+      "否定过多旧事实破坏连续性"
+    ],
+    "abort_conditions": [
+      "重读依赖此前不存在的信息",
+      "新解释会抹去已发生后果"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_REFRAME_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_LOCK_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "MINIMUM_SUFFICIENT_CHAIN",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "sufficient_evidence_chain"
+    ],
+    "requires_any": [
+      "actionable_unknown",
+      "competing_explanations"
+    ],
+    "forbids_any": [
+      "anchor_forbids_lock",
+      "answer_not_yet_earned"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "证据足够确认局部结论，但仍需保护更高层问题的开放性。",
+    "operator_steps": [
+      "界定本集真正有充分依据的最小结论。",
+      "按证据链排除替代解释，而非凭直觉宣布答案。",
+      "把局部结论转成行动前提，并明确仍未覆盖的边界。"
+    ],
+    "expected_state_change": "一个局部未知转为确认事实，更高层未知项不被连带解决。",
+    "observable_evidence": [
+      "结论对应完整依据",
+      "后续行动因结论改变"
+    ],
+    "risks": [
+      "局部结论被写成核心答案",
+      "用台词一次性总结证据链"
+    ],
+    "abort_conditions": [
+      "硬锚点禁止锁定",
+      "证据仍依赖单一来源"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_LOCK_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "INFORMATION_OPEN"
+    ],
+    "risk_outcomes": [
+      "forced_core_resolution",
+      "unresolved_obligation_drop"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_LOCK_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "OBSERVABLE_VERIFICATION_LOCK",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "verification_opportunity",
+      "sufficient_evidence_chain"
+    ],
+    "requires_any": [],
+    "forbids_any": [
+      "anchor_forbids_lock",
+      "agency_unavailable"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "判断已接近成立，需要由可观察验证而不是解释性台词完成锁定。",
+    "operator_steps": [
+      "把待确认结论转换为会产生不同结果的验证行动。",
+      "让相关人物在场承受验证带来的实际后果。",
+      "只有结果满足既有证据链时才锁定结论。"
+    ],
+    "expected_state_change": "私人判断变成可被相关人物共同采用的确认事实。",
+    "observable_evidence": [
+      "验证行为在场景发生",
+      "结果改变责任或行动"
+    ],
+    "risks": [
+      "验证被设计成必然成功",
+      "公开确认过早收束冲突"
+    ],
+    "abort_conditions": [
+      "无法设计区分性验证",
+      "验证会越过阶段边界"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_INFO_LOCK_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "TEST",
+      "CONSOLIDATE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "INFORMATION_OPEN"
+    ],
+    "risk_outcomes": [
+      "forced_core_resolution"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_GAIN_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "RECIPROCAL_RESOURCE_EXCHANGE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "active_goal_blocked",
+      "exchangeable_resource"
+    ],
+    "requires_any": [
+      "shared_task_exists",
+      "relationship_boundary_active"
+    ],
+    "forbids_any": [
+      "agency_unavailable"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "现有路径受阻，但人物可用已经拥有的资源换取新的行动条件。",
+    "operator_steps": [
+      "明确人物能提供且会失去部分控制的既有资源。",
+      "让另一方基于自身利益提出有边界的交换条件。",
+      "交换后开放一条新路径，同时记录新增义务或风险。"
+    ],
+    "expected_state_change": "人物获得新的行动条件，同时承担可继承的交换成本。",
+    "observable_evidence": [
+      "双方各自付出具体内容",
+      "新路径直接来自交换"
+    ],
+    "risks": [
+      "交换条件过于便利",
+      "只增加资源没有新增约束"
+    ],
+    "abort_conditions": [
+      "人物没有可交换资源",
+      "对方没有议价理由"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "forced_core_resolution"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_GAIN_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "external_rescue"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_GAIN_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "CONSTRAINT_REVEALS_ALTERNATIVE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "active_goal_blocked",
+      "alternative_route_possible"
+    ],
+    "requires_any": [
+      "sequence_bottleneck",
+      "reusable_existing_resource"
+    ],
+    "forbids_any": [
+      "no_real_alternative"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "正面路径不可行，但现有限制暴露了另一条更窄、更昂贵的路线。",
+    "operator_steps": [
+      "把阻碍拆成不可改变部分和仍可操作部分。",
+      "利用仍可操作部分构造替代路线，不新增决定性资源。",
+      "让替代路线解决局部阻碍，同时带来新的要求。"
+    ],
+    "expected_state_change": "行动空间增加一条有代价的新路径，原有障碍仍保持真实。",
+    "observable_evidence": [
+      "替代路线来自既有限制",
+      "新路径伴随明确成本"
+    ],
+    "risks": [
+      "替代方案像临时开门",
+      "新路线完全绕过原冲突"
+    ],
+    "abort_conditions": [
+      "不存在可操作余地",
+      "替代路径让原障碍失去意义"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "forced_core_resolution"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_GAIN_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_LOSS_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "DEADLINE_CLOSES_ROUTE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "active_deadline",
+      "multiple_viable_options"
+    ],
+    "requires_any": [
+      "active_goal_blocked",
+      "resource_scarcity"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "既有期限即将使一条真实可行的路径失效，人物必须决定是否保留它。",
+    "operator_steps": [
+      "明确期限关闭的是哪条路径，而非笼统制造紧张。",
+      "让人物把有限行动投入一条路径，并因此无暇保住另一条。",
+      "期限到达后永久更新可用选项，不用巧合恢复。"
+    ],
+    "expected_state_change": "至少一条原本可行的路径因时间和人物选择而关闭。",
+    "observable_evidence": [
+      "期限此前已存在",
+      "人物选择影响哪条路径关闭"
+    ],
+    "risks": [
+      "反复使用期限形成公式",
+      "路径关闭只是口头宣告"
+    ],
+    "abort_conditions": [
+      "期限可无成本延长",
+      "实际上只有一条路径"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_LOSS_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_LOSS_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "ACTION_CONSUMES_RESOURCE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "resource_scarcity"
+    ],
+    "requires_any": [
+      "multiple_viable_options",
+      "active_goal_blocked"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "一次推进需要消耗稀缺资源，使用后会缩小后续行动空间。",
+    "operator_steps": [
+      "选择已经建立且不能立即补充的资源。",
+      "让人物为当前目标实际消耗它，并获得局部推进。",
+      "明确这次消耗使哪项后续计划变得更难。"
+    ],
+    "expected_state_change": "当前目标得到推进，但资源存量和未来选项同步减少。",
+    "observable_evidence": [
+      "资源消耗在行动中可见",
+      "后续路径因消耗变化"
+    ],
+    "risks": [
+      "资源数量缺乏连续性",
+      "消耗很快被便利补回"
+    ],
+    "abort_conditions": [
+      "资源并不稀缺",
+      "消耗不影响后续选择"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "forced_core_resolution"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_LOSS_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_REFRAME_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "RESOURCE_REPURPOSING",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "reusable_existing_resource",
+      "active_goal_blocked"
+    ],
+    "requires_any": [],
+    "forbids_any": [
+      "agency_unavailable"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "不能增加资源，但已有资源可以改变用途或与其他条件重新组合。",
+    "operator_steps": [
+      "选择一个已出现但当前用途受限的资源。",
+      "让人物放弃其原用途的一部分，以支持更紧迫的目标。",
+      "保留改作他用造成的缺口，使重配成为真实取舍。"
+    ],
+    "expected_state_change": "资源总量不变，但用途、控制者或服务目标发生变化。",
+    "observable_evidence": [
+      "资源此前已有明确用途",
+      "重配同时造成收益与缺口"
+    ],
+    "risks": [
+      "资源变成万能工具",
+      "原用途损失没有后果"
+    ],
+    "abort_conditions": [
+      "资源用途无法改变",
+      "重配等同凭空复制资源"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "forced_core_resolution"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_REFRAME_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "external_rescue"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_REFRAME_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "SEQUENCE_REDESIGN",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "sequence_bottleneck",
+      "active_goal_blocked"
+    ],
+    "requires_any": [
+      "alternative_route_possible",
+      "complementary_capabilities"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "目标和资源未改变，但原有步骤顺序使行动无法继续。",
+    "operator_steps": [
+      "区分必须先完成与只是习惯上先做的步骤。",
+      "让人物承担风险，调换可变步骤或拆分并行任务。",
+      "用实际结果检验新顺序，并记录新限制。"
+    ],
+    "expected_state_change": "行动方案的顺序或分工被重构，形成可执行的新路径。",
+    "observable_evidence": [
+      "瓶颈对应明确步骤依赖",
+      "新顺序被实际执行"
+    ],
+    "risks": [
+      "忽视真实前置条件",
+      "重排只停留在讨论"
+    ],
+    "abort_conditions": [
+      "所有步骤均有严格顺序",
+      "人物无法承担调整风险"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_REFRAME_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_LOCK_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "IRREVERSIBLE_COST_PAYMENT",
+    "applicable_phases": [
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "irreversible_choice_ready",
+      "multiple_viable_options"
+    ],
+    "requires_any": [
+      "resource_scarcity",
+      "active_deadline"
+    ],
+    "forbids_any": [
+      "no_real_alternative"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 4,
+    "applicable_situation": "人物已看清多个选项的代价，需要通过实际支付成本关闭一条未来。",
+    "operator_steps": [
+      "明确每个选项会保留和放弃什么。",
+      "让人物完成一个无法轻易撤销的具体行动。",
+      "把被关闭的未来从后续目标移除，并保留关系或能力后果。"
+    ],
+    "expected_state_change": "一个真实选项永久关闭，人物必须在剩余路径上继续。",
+    "observable_evidence": [
+      "不可撤销行动真实发生",
+      "被放弃选项不再成为廉价退路"
+    ],
+    "risks": [
+      "代价过大压缩后续空间",
+      "象征动作冒充不可逆选择"
+    ],
+    "abort_conditions": [
+      "人物尚不知道基本代价",
+      "选择可无成本撤销"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_LOCK_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CLOSE",
+      "CONSEQUENCE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "OPTION_OPEN"
+    ],
+    "risk_outcomes": [
+      "fake_choice",
+      "unresolved_obligation_drop"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_LOCK_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "BINDING_PATH_COMMITMENT",
+    "applicable_phases": [
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "irreversible_choice_ready"
+    ],
+    "requires_any": [
+      "active_deadline",
+      "handoff_ready",
+      "relationship_boundary_active"
+    ],
+    "forbids_any": [
+      "no_real_alternative"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 4,
+    "applicable_situation": "人物必须把偏好变成有约束力的行动承诺，不能继续保留所有退路。",
+    "operator_steps": [
+      "选择一个会被他人或后续行动验证的承诺对象。",
+      "让人物交付控制权、承担责任或启动不兼容路径。",
+      "明确违背承诺的成本，并关闭冲突选项。"
+    ],
+    "expected_state_change": "人物被绑定在一条行动路径上，其他人可据此重新安排选择。",
+    "observable_evidence": [
+      "承诺伴随控制权或责任变化",
+      "存在明确违约成本"
+    ],
+    "risks": [
+      "把普通表态误写成锁定",
+      "承诺由外部强迫而非选择"
+    ],
+    "abort_conditions": [
+      "承诺没有可验证后果",
+      "人物没有真实替代项"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "forced_core_resolution"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_OPTION_LOCK_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "OPTION_OPEN"
+    ],
+    "risk_outcomes": [
+      "fake_choice",
+      "unresolved_obligation_drop"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_GAIN_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "LIMITED_TASK_INTERDEPENDENCE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "shared_task_exists",
+      "trust_low"
+    ],
+    "requires_any": [
+      "complementary_capabilities",
+      "active_deadline"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "人物互不信任，但当前任务要求彼此提供不可互相替代的贡献。",
+    "operator_steps": [
+      "把任务拆成双方各自能控制的局部部分。",
+      "让双方在保留边界的情况下完成一次真实交接。",
+      "用交接结果建立有限信任，只扩大相称的合作范围。"
+    ],
+    "expected_state_change": "关系从拒绝合作转为针对具体任务的有限互赖，不要求情感和解。",
+    "observable_evidence": [
+      "双方各有不可替代行动",
+      "合作结果可被后续继承"
+    ],
+    "risks": [
+      "一次合作被夸大成完全信任",
+      "任务分工变成说明清单"
+    ],
+    "abort_conditions": [
+      "任务可由一方独立完成",
+      "双方没有保留边界的理由"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_GAIN_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "instant_reconciliation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_GAIN_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "COSTLY_RELIABILITY_SIGNAL",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "reliability_test_available",
+      "trust_low"
+    ],
+    "requires_any": [
+      "relationship_boundary_active",
+      "shared_task_exists"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "口头保证不足以改变关系，但人物可以承担真实成本证明可靠。",
+    "operator_steps": [
+      "选择与关系争议直接相关且不能轻易伪装的成本。",
+      "让人物在不能确保回报的情况下主动承担它。",
+      "由另一方根据可见行为调整一项具体合作边界。"
+    ],
+    "expected_state_change": "信任增加被落实为有限权限、信息共享或合作机会。",
+    "observable_evidence": [
+      "可靠性通过有成本行为证明",
+      "另一方行为边界随之变化"
+    ],
+    "risks": [
+      "牺牲过度煽情",
+      "成本与争议无关只制造好感"
+    ],
+    "abort_conditions": [
+      "行动没有真实成本",
+      "另一方无法观察或验证"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_GAIN_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "TEST",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "instant_reconciliation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_LOSS_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "BOUNDARY_VIOLATION_CONSEQUENCE",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "relationship_boundary_active"
+    ],
+    "requires_any": [
+      "shared_task_exists",
+      "trust_low"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "人物为推进目标准备越过另一方已建立的权限、底线或承诺边界。",
+    "operator_steps": [
+      "明确被越过的边界此前如何成立。",
+      "让人物主动越界并获得短期推进，而非用误会代替选择。",
+      "让受影响者撤回一项具体合作、权限或信任。"
+    ],
+    "expected_state_change": "关系恶化被落实为合作范围缩小或访问权撤回。",
+    "observable_evidence": [
+      "越界行动清楚可见",
+      "关系损失改变后续条件"
+    ],
+    "risks": [
+      "边界未建立导致冲突突兀",
+      "只写情绪爆发没有后果"
+    ],
+    "abort_conditions": [
+      "越界完全出于不可控意外",
+      "受影响者没有可撤回内容"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_LOSS_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_LOSS_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "UNEQUAL_COST_BREAKDOWN",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "unequal_cost_distribution",
+      "shared_task_exists"
+    ],
+    "requires_any": [
+      "responsibility_dispute",
+      "resource_scarcity"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "合作仍在继续，但风险、劳动或损失长期集中在其中一方。",
+    "operator_steps": [
+      "让不平等成本通过具体任务暴露，而非概括旧账。",
+      "迫使承担更多者停止、拒绝或改变一项行动。",
+      "让合作失败影响共同目标，并留下后续问题。"
+    ],
+    "expected_state_change": "合作因代价失衡而中断或收缩，共同任务同步受到影响。",
+    "observable_evidence": [
+      "成本差异由行动显示",
+      "撤回合作造成可追踪后果"
+    ],
+    "risks": [
+      "冲突退化成重复指责",
+      "把一方写成纯粹受害者"
+    ],
+    "abort_conditions": [
+      "成本实际分配均衡",
+      "拒绝不会影响共同目标"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_LOSS_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_REFRAME_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "RESPONSIBILITY_REDISTRIBUTION",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "responsibility_dispute"
+    ],
+    "requires_any": [
+      "shared_task_exists",
+      "unequal_cost_distribution",
+      "handoff_ready"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "关系冲突无法靠增加好感解决，真正争议在责任、权限或失败成本。",
+    "operator_steps": [
+      "把情绪争执转成谁决定、谁执行、谁承担失败的问题。",
+      "让人物通过一次任务交换或拒绝重新划分边界。",
+      "保留未解决情感，但让新边界立即影响行动。"
+    ],
+    "expected_state_change": "关系定位改变，责任与权限获得新的可执行定义。",
+    "observable_evidence": [
+      "责任变化由行动落实",
+      "新边界影响后续任务"
+    ],
+    "risks": [
+      "写成机械分工",
+      "边界改变只存在于台词"
+    ],
+    "abort_conditions": [
+      "争议不涉及责任或权限",
+      "新分配无人承担成本"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_REFRAME_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "CONSOLIDATE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_REFRAME_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "RELATIONSHIP_BASIS_SHIFT",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "relationship_basis_unstable"
+    ],
+    "requires_any": [
+      "competence_demonstrated",
+      "relationship_boundary_active",
+      "shared_task_exists"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "原有身份或亲疏关系已不能解释双方当前的合作与冲突。",
+    "operator_steps": [
+      "识别旧关系中已失效的一项默认权利或义务。",
+      "让当前行动证明双方需要以新条件继续互动。",
+      "通过权限、距离或责任变化确认新关系基础。"
+    ],
+    "expected_state_change": "关系不必变好或变坏，但成立依据和互动规则发生改变。",
+    "observable_evidence": [
+      "旧默认规则在行动中失效",
+      "新规则由双方行为确认"
+    ],
+    "risks": [
+      "只更换标签没有行为变化",
+      "关系转变过快"
+    ],
+    "abort_conditions": [
+      "原关系规则仍完全有效",
+      "新定位只是单方愿望"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_REFRAME_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_LOCK_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "RESPONSIBILITY_TIME_FALLBACK",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "cooperation_ready_to_formalize"
+    ],
+    "requires_any": [
+      "responsibility_dispute",
+      "active_deadline",
+      "shared_task_exists"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "已有局部合作，但若不确定责任、期限和失败补救，关系会退回原点。",
+    "operator_steps": [
+      "选定一项双方确实需要继承的具体责任。",
+      "通过实际安排明确负责人、完成条件和交接时点。",
+      "加入失败时的补位或后果，并保留情感边界。"
+    ],
+    "expected_state_change": "有限合作成为可继承承诺，后续可以检验履行或违约。",
+    "observable_evidence": [
+      "责任和完成条件明确",
+      "存在可执行失败补救"
+    ],
+    "risks": [
+      "场景像行政说明",
+      "把安排误写成彻底和解"
+    ],
+    "abort_conditions": [
+      "双方尚未真实合作",
+      "责任无法由当前人物承担"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_LOCK_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "RELATIONSHIP_NONRESOLUTION"
+    ],
+    "risk_outcomes": [
+      "instant_reconciliation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_LOCK_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "VERIFIABLE_HANDOFF",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "handoff_ready"
+    ],
+    "requires_any": [
+      "cooperation_ready_to_formalize",
+      "competence_demonstrated"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "关系变化需要通过控制权或责任的真实交接固定下来。",
+    "operator_steps": [
+      "明确当前由谁控制任务、资源或决定。",
+      "让交出者完成明确交接，并让接手者承担首个结果。",
+      "通过可见结果或后续依赖确认交接生效。"
+    ],
+    "expected_state_change": "责任或控制权稳定转移，双方不能继续按旧关系行事。",
+    "observable_evidence": [
+      "交接对象和控制者变化",
+      "接手者立即承担后果"
+    ],
+    "risks": [
+      "交接只是象征动作",
+      "能力未建立却强行赋权"
+    ],
+    "abort_conditions": [
+      "交接条件尚未成熟",
+      "可无成本收回全部控制"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_BOND_LOCK_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "RELATIONSHIP_NONRESOLUTION"
+    ],
+    "risk_outcomes": [
+      "instant_reconciliation",
+      "unresolved_obligation_drop"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_GAIN_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "VERIFIABLE_PROCESS_MILESTONE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "incremental_skill_task"
+    ],
+    "requires_any": [
+      "active_goal_blocked",
+      "prior_attempt_failed"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "能力或成果不能一次完成，但可以推进一个有标准、可检验的局部工序。",
+    "operator_steps": [
+      "把总体目标拆成当前可尝试的最小有效工序。",
+      "让人物在限制下调整，并支付时间、体力或失败成本。",
+      "以具体结果验证提升，同时保留未掌握部分。"
+    ],
+    "expected_state_change": "能力或成果完成度前进一个可继承台阶，不发生跳跃成长。",
+    "observable_evidence": [
+      "提升对应具体操作结果",
+      "未完成部分仍清楚存在"
+    ],
+    "risks": [
+      "过程变成蒙太奇概述",
+      "一次成功被夸大为完全掌握"
+    ],
+    "abort_conditions": [
+      "目标无法拆成局部工序",
+      "提升没有可观察标准"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_GAIN_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "PROGRESS",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_GAIN_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_GAIN",
+    "secondary_move_ids": [],
+    "mechanism_family": "PARTIAL_TASK_TRANSFER",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "transferable_subtask"
+    ],
+    "requires_any": [
+      "complementary_capabilities",
+      "handoff_ready"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "某人尚不能承担整体任务，但可以独立完成一个会影响结果的局部部分。",
+    "operator_steps": [
+      "选择边界清楚、失败后果可见的局部任务。",
+      "让承担者独立决策执行，其他人不能在关键处代做。",
+      "根据结果扩大、维持或收回下一步责任。"
+    ],
+    "expected_state_change": "个人或团队新增一项经过实际验证的局部能力。",
+    "observable_evidence": [
+      "局部任务独立完成",
+      "结果改变后续责任范围"
+    ],
+    "risks": [
+      "名义移交但关键步骤由他人完成",
+      "局部成功被写成全面胜任"
+    ],
+    "abort_conditions": [
+      "任务无法明确切分",
+      "失败会让整体目标立即崩溃"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_GAIN_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_LOSS_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "PARTIAL_FAILURE_WITH_TRACE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "prior_attempt_failed"
+    ],
+    "requires_any": [
+      "incremental_skill_task",
+      "active_goal_blocked"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "已有方案需要接受现实检验，失败应改变后续方法而不是简单归零。",
+    "operator_steps": [
+      "让人物按已有方案完成一次真实尝试。",
+      "使失败源于已建立的能力、条件或判断限制。",
+      "保留失败痕迹，并提取可用于改法的具体原因。"
+    ],
+    "expected_state_change": "当前方案可行性下降，并留下后续必须处理的失败痕迹。",
+    "observable_evidence": [
+      "失败原因可追溯",
+      "失败后状态不同于尝试前"
+    ],
+    "risks": [
+      "失败只为拖延",
+      "连续失败削弱能动性"
+    ],
+    "abort_conditions": [
+      "失败依赖纯偶然",
+      "失败不改变资源、方法或关系"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_LOSS_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "TEST",
+      "CONSEQUENCE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_LOSS_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_LOSS",
+    "secondary_move_ids": [],
+    "mechanism_family": "OVERLOAD_NARROWS_CAPACITY",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "capacity_under_strain"
+    ],
+    "requires_any": [
+      "active_deadline",
+      "unequal_cost_distribution",
+      "resource_scarcity"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "人物或组织继续承担现有负荷会造成持续损害，能力边界必须收缩。",
+    "operator_steps": [
+      "明确当前负荷超过哪项既有能力或恢复条件。",
+      "让人物为保住当前目标继续行动，并出现可追踪损害。",
+      "将损害写入后续能力边界，迫使任务缩减或重分。"
+    ],
+    "expected_state_change": "可承担任务范围永久或阶段性缩小，其他目标必须重排。",
+    "observable_evidence": [
+      "过载与损害有直接因果",
+      "后续任务范围实际减少"
+    ],
+    "risks": [
+      "突然恶化强行煽情",
+      "损害下一集立即消失"
+    ],
+    "abort_conditions": [
+      "此前没有过载征兆",
+      "损害不影响后续能力"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_LOSS_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_REFRAME_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "METHOD_CHANGE_FROM_DIAGNOSIS",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "diagnosed_method_failure"
+    ],
+    "requires_any": [
+      "prior_attempt_failed",
+      "active_goal_blocked"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "失败原因已足够明确，人物需要改变方法而不是提高意志或重复尝试。",
+    "operator_steps": [
+      "从失败结果中识别一个可操作原因。",
+      "保留目标，但替换与原因直接相关的方法、顺序或标准。",
+      "用小规模行动检验新方法，并接受新限制。"
+    ],
+    "expected_state_change": "方案方法有依据地改变，旧失败不被抹除，新方法仍需验证。",
+    "observable_evidence": [
+      "改法直接回应失败原因",
+      "新方法通过行动出现"
+    ],
+    "risks": [
+      "方法变化像突然开窍",
+      "新方案无视资源限制"
+    ],
+    "abort_conditions": [
+      "失败原因仍不清楚",
+      "所谓改法只是重复原方案"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_REFRAME_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "TEST"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_REFRAME_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_REFRAME",
+    "secondary_move_ids": [],
+    "mechanism_family": "WORK_AROUND_LIMITATION",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "complementary_capabilities",
+      "capacity_under_strain"
+    ],
+    "requires_any": [
+      "shared_task_exists",
+      "transferable_subtask"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 2,
+    "applicable_situation": "某项能力限制不能迅速消除，但可通过重组现有能力继续行动。",
+    "operator_steps": [
+      "承认不可消除的能力边界，不安排奇迹恢复。",
+      "把任务重拆为不同能力可以承担的部分。",
+      "让新分工完成真实协作，并暴露协调成本。"
+    ],
+    "expected_state_change": "能力总量未必增加，但使用能力的结构发生改变。",
+    "observable_evidence": [
+      "限制继续存在",
+      "新组合产生不同结果"
+    ],
+    "risks": [
+      "分工过于完美消除困难",
+      "限制只在台词中承认"
+    ],
+    "abort_conditions": [
+      "现有能力无法互补",
+      "重组违反人物权限"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_REFRAME_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "external_rescue"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_LOCK_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "EARNED_ROLE_RECOGNITION",
+    "applicable_phases": [
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "competence_demonstrated",
+      "role_recognition_pending"
+    ],
+    "requires_any": [
+      "handoff_ready",
+      "shared_task_exists"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 4,
+    "applicable_situation": "人物已用结果证明能力，但其责任、身份或位置仍处于临时状态。",
+    "operator_steps": [
+      "回收此前发生的能力证明，不新增突然考验。",
+      "让有权调整边界的人基于结果交出真实责任或位置。",
+      "让人物立即承担新位置的首个限制。"
+    ],
+    "expected_state_change": "能力获得稳定承认，责任范围和他人依赖正式改变。",
+    "observable_evidence": [
+      "承认基于此前结果",
+      "新位置伴随新增责任"
+    ],
+    "risks": [
+      "承认像情感奖励",
+      "位置超出已证明能力"
+    ],
+    "abort_conditions": [
+      "能力尚未被证明",
+      "无人能确认位置变化"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_LOCK_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "unearned_capability_jump"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_LOCK_02",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_LOCK",
+    "secondary_move_ids": [],
+    "mechanism_family": "PROCEDURE_STABILIZES_CAPACITY",
+    "applicable_phases": [
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "competence_demonstrated"
+    ],
+    "requires_any": [
+      "cooperation_ready_to_formalize",
+      "incremental_skill_task",
+      "handoff_ready"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 4,
+    "applicable_situation": "一次成功尚不足以继承，需要把有效做法固定为可重复程序或成果状态。",
+    "operator_steps": [
+      "找出成功中真正可重复的步骤，而非复制偶然条件。",
+      "把步骤落实为可检查的顺序、标准或交接方式。",
+      "用下一次局部执行确认可继承性，并保留适用边界。"
+    ],
+    "expected_state_change": "临时成功转为稳定能力或成果状态，后续不必从零证明。",
+    "observable_evidence": [
+      "有效步骤被再次执行",
+      "程序有明确适用边界"
+    ],
+    "risks": [
+      "把流程清单当成戏剧结果",
+      "一次复现被夸大为永久成熟"
+    ],
+    "abort_conditions": [
+      "成功主要来自偶然",
+      "无法识别可重复步骤"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_CORE_CAPACITY_LOCK_02"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "unearned_capability_jump",
+      "unresolved_obligation_drop"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_TO_OPTION_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_GAIN",
+    "secondary_move_ids": [
+      "OPTION_REFRAME"
+    ],
+    "mechanism_family": "KNOWLEDGE_CHANGES_ACTION_ROUTE",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "actionable_unknown",
+      "active_goal_blocked"
+    ],
+    "requires_any": [
+      "multiple_information_sources",
+      "action_can_test_belief"
+    ],
+    "forbids_any": [
+      "core_problem_already_resolved"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "取得新认识本身不够，信息必须迫使人物改变现有行动路线。",
+    "operator_steps": [
+      "通过核验或测试获得边界明确的新事实。",
+      "指出该事实使原方案中的哪项前提失效。",
+      "只使用既有资源重排下一步路径，并承担重排成本。"
+    ],
+    "expected_state_change": "一项未知转为已知，同时当前行动方案被有依据地改写。",
+    "observable_evidence": [
+      "新事实否定原方案前提",
+      "人物立即改变具体行动"
+    ],
+    "risks": [
+      "信息与改法缺少联系",
+      "一次完成过多推进"
+    ],
+    "abort_conditions": [
+      "新信息不影响选择",
+      "改法依赖新发明资源"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "cost_free_success",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_INFO_TO_OPTION_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "PROGRESS",
+      "RECOVER"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_INFO_TO_BOND_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "INFO_LOSS",
+    "secondary_move_ids": [
+      "BOND_REFRAME"
+    ],
+    "mechanism_family": "UNCERTAINTY_REDRAWS_TRUST",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "vulnerable_information_source",
+      "relationship_boundary_active"
+    ],
+    "requires_any": [
+      "trust_low",
+      "responsibility_dispute"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "信息源受损后，人物必须重定谁能判断、谁承担不确定性的后果。",
+    "operator_steps": [
+      "让既有信息源因可追踪行动失效或降级。",
+      "让人物对剩余不确定性采取不同责任立场。",
+      "通过权限或责任变化重划信任边界，不补出便利答案。"
+    ],
+    "expected_state_change": "认知能力下降，同时判断权和责任边界重新分配。",
+    "observable_evidence": [
+      "信息损失先于关系调整",
+      "新边界直接回应不确定性"
+    ],
+    "risks": [
+      "把信息损失只当冲突借口",
+      "关系变化大于实际影响"
+    ],
+    "abort_conditions": [
+      "损失不影响共同决策",
+      "人物间不存在判断责任"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_INFO_TO_BOND_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "PRESERVE",
+      "RECOVER"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_TO_CAPACITY_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_LOSS",
+    "secondary_move_ids": [
+      "CAPACITY_REFRAME"
+    ],
+    "mechanism_family": "CLOSED_ROUTE_FORCES_METHOD_CHANGE",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "active_goal_blocked",
+      "alternative_route_possible"
+    ],
+    "requires_any": [
+      "active_deadline",
+      "resource_scarcity",
+      "sequence_bottleneck"
+    ],
+    "forbids_any": [
+      "agency_unavailable"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "原行动路径关闭后，人物必须在能力边界内改变方法，而非等待恢复原路。",
+    "operator_steps": [
+      "让一条已建立路径因期限、消耗或选择真实关闭。",
+      "识别剩余能力能够支持的最小替代方法。",
+      "执行一次新方法，并保留它产生的新限制。"
+    ],
+    "expected_state_change": "可用选项减少，但执行方法获得有依据的重构。",
+    "observable_evidence": [
+      "原路径不再可用",
+      "新方法只使用既有能力"
+    ],
+    "risks": [
+      "关路后立即开出等价捷径",
+      "方法变化缺少试验成本"
+    ],
+    "abort_conditions": [
+      "原路径可无成本恢复",
+      "剩余能力不支持替代行动"
+    ],
+    "prohibited_inventions": [
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_OPTION_TO_CAPACITY_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "RECOVER",
+      "CONSEQUENCE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_OPTION_TO_BOND_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "OPTION_LOCK",
+    "secondary_move_ids": [
+      "BOND_REFRAME"
+    ],
+    "mechanism_family": "CHOICE_REDISTRIBUTES_COST",
+    "applicable_phases": [
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "irreversible_choice_ready",
+      "responsibility_dispute"
+    ],
+    "requires_any": [
+      "unequal_cost_distribution",
+      "multiple_viable_options"
+    ],
+    "forbids_any": [
+      "no_real_alternative"
+    ],
+    "repair_triggers": [],
+    "cooldown_episodes": 4,
+    "applicable_situation": "不可逆选择不仅关闭路径，也会改变不同人物承担的损失和责任。",
+    "operator_steps": [
+      "让人物实际完成关闭选项的行动。",
+      "逐一显示选择把哪些成本转移给了谁。",
+      "通过接受、拒绝或附加条件重新划分关系责任。"
+    ],
+    "expected_state_change": "一个选项永久关闭，相关人物的责任和关系边界同步变化。",
+    "observable_evidence": [
+      "选择具有不可撤销后果",
+      "成本分配触发关系行动"
+    ],
+    "risks": [
+      "只讨论代价而未选择",
+      "关系变化仅是情绪反应"
+    ],
+    "abort_conditions": [
+      "选择不影响他人",
+      "代价可被外部条件完全补偿"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "instant_reconciliation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_OPTION_TO_BOND_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [
+      "OPTION_OPEN"
+    ],
+    "risk_outcomes": [
+      "fake_choice",
+      "unresolved_obligation_drop"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_TO_CAPACITY_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_GAIN",
+    "secondary_move_ids": [
+      "CAPACITY_GAIN"
+    ],
+    "mechanism_family": "COOPERATION_ENABLES_MILESTONE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "shared_task_exists",
+      "complementary_capabilities"
+    ],
+    "requires_any": [
+      "trust_low",
+      "incremental_skill_task"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "有限合作只有完成原本无法独立完成的任务时，才会形成可信推进。",
+    "operator_steps": [
+      "让双方各自控制任务中不可替代的一部分。",
+      "通过有边界的交接完成一个可验证工序。",
+      "把成功分别写入关系信任和任务能力，不扩大到未证明范围。"
+    ],
+    "expected_state_change": "关系获得有限信任，团队新增一项经过验证的协作能力。",
+    "observable_evidence": [
+      "合作产生独立结果",
+      "关系与能力变化都有边界"
+    ],
+    "risks": [
+      "一次成功带来全面和解",
+      "任务过易无法检验合作"
+    ],
+    "abort_conditions": [
+      "一方能独立完成全部任务",
+      "双方能力没有互补"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "unearned_capability_jump",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_BOND_TO_CAPACITY_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "instant_reconciliation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_BOND_TO_OPTION_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "BOND_LOSS",
+    "secondary_move_ids": [
+      "OPTION_LOSS"
+    ],
+    "mechanism_family": "CONFLICT_REMOVES_ACCESS",
+    "applicable_phases": [
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "relationship_boundary_active"
+    ],
+    "requires_any": [
+      "shared_task_exists",
+      "access_window_limited",
+      "exchangeable_resource"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "关系破裂应产生行动后果，使人物失去此前依赖的支持条件。",
+    "operator_steps": [
+      "让人物通过选择越过既有关系边界。",
+      "由受影响者撤回其真实控制的一项支持条件。",
+      "让主角面对缩小后的选项，不用新援助立即替代。"
+    ],
+    "expected_state_change": "关系恶化与行动空间收缩形成同一因果链。",
+    "observable_evidence": [
+      "撤回内容此前由对方控制",
+      "路径损失改变下一步计划"
+    ],
+    "risks": [
+      "把对方写成任性阻挠者",
+      "损失只持续一个场景"
+    ],
+    "abort_conditions": [
+      "关系方不控制行动条件",
+      "撤回违反已建立强制责任"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_BOND_TO_OPTION_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSEQUENCE",
+      "PRESERVE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_TO_INFO_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_LOSS",
+    "secondary_move_ids": [
+      "INFO_GAIN"
+    ],
+    "mechanism_family": "FAILURE_REVEALS_MECHANISM",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation"
+    ],
+    "requires_all": [
+      "prior_attempt_failed",
+      "actionable_unknown"
+    ],
+    "requires_any": [
+      "incremental_skill_task",
+      "active_goal_blocked"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 3,
+    "applicable_situation": "一次失败不应只是挫折，它可以暴露原方案中此前无法观察的机制。",
+    "operator_steps": [
+      "让人物按既有方案完成一次有成本的尝试。",
+      "从失败发生的具体环节提取一个可核验新事实。",
+      "保留损失，并用新事实限定下一次尝试方向。"
+    ],
+    "expected_state_change": "能力或方案受损，同时新增一项由失败行动产生的可靠认识。",
+    "observable_evidence": [
+      "新事实只能由本次失败观察",
+      "损失没有因信息而消失"
+    ],
+    "risks": [
+      "失败被设计成便利教学",
+      "每次失败都自动提供答案"
+    ],
+    "abort_conditions": [
+      "失败与待确认问题无关",
+      "新事实此前已经明确"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_CAPACITY_TO_INFO_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "TEST",
+      "RECOVER"
+    ],
+    "invariant_guards": [
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "ESTABLISHED_LOSS",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "forced_escalation"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_STRATEGY_CAPACITY_TO_BOND_01",
+    "version": "4.0.0-candidate",
+    "layer": "strategy",
+    "status": "candidate",
+    "primary_move_id": "CAPACITY_GAIN",
+    "secondary_move_ids": [
+      "BOND_LOCK"
+    ],
+    "mechanism_family": "COMPETENCE_EARNS_RESPONSIBILITY",
+    "applicable_phases": [
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [
+      "competence_demonstrated",
+      "handoff_ready"
+    ],
+    "requires_any": [
+      "role_recognition_pending",
+      "cooperation_ready_to_formalize"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "cooldown_episodes": 4,
+    "applicable_situation": "能力证明应转化为真实责任变化，而不是停留在赞许或口头认可。",
+    "operator_steps": [
+      "回收人物已经完成的可验证能力结果。",
+      "让原责任方基于结果交出边界明确的任务或权限。",
+      "让接手者承担首个后果，并确定失败责任。"
+    ],
+    "expected_state_change": "能力提升被固定为新的责任关系和可继承位置。",
+    "observable_evidence": [
+      "责任变化以此前结果为依据",
+      "新责任立即接受实际检验"
+    ],
+    "risks": [
+      "将表扬误写成责任锁定",
+      "交接范围超过已证明能力"
+    ],
+    "abort_conditions": [
+      "能力只被口头声称",
+      "不存在可交接责任"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "instant_reconciliation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_BRIDGE_CAPACITY_TO_BOND_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "STRATEGY",
+    "retrieval_mode": "direct",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [
+      "cost_free_success",
+      "unearned_capability_jump"
+    ],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_MOVE_REPEAT_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "MOVE_REPEAT_DIVERSIFICATION",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "recent_move_repeat"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "近期反复使用相同 move 和因果实现，虽然事件不同但推进结构已经同质。",
+    "operator_steps": [
+      "保留本集目标，识别重复的是状态对象、行动方式还是结果类型。",
+      "至少替换其中两个维度，并优先作用于另一类状态对象。",
+      "确保新机制仍由当前人物、资源和约束产生。"
+    ],
+    "expected_state_change": "本集产生与近期不同类型或不同因果路径的可继承变化。",
+    "observable_evidence": [
+      "状态对象或机制变化",
+      "不复刻近期集尾结果"
+    ],
+    "risks": [
+      "为求不同破坏连续性",
+      "只更换场景表面元素"
+    ],
+    "abort_conditions": [
+      "重复是系列结构明确要求",
+      "更换机制违反硬锚点"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_MOVE_REPEAT_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_SCENE_REPEAT_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "SCENE_FUNCTION_REWRITE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "recent_scene_repeat"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "近期场景反复由相同人物在相同目标下对话，并以相似结果结束。",
+    "operator_steps": [
+      "识别重复场景承担的求证、协商、对峙、执行或收束功能。",
+      "保留必要人物和目标，但更换场景功能与主导行动者。",
+      "让环境只服务新行动，不靠换地点伪装变化。"
+    ],
+    "expected_state_change": "重复关系获得新的行动结构和结果，不再复演上一场争论。",
+    "observable_evidence": [
+      "场景主动作变化",
+      "结尾留下不同类型状态"
+    ],
+    "risks": [
+      "强行换场导致因果断裂",
+      "动作只是对话装饰"
+    ],
+    "abort_conditions": [
+      "重复场景有意展示状态恶化",
+      "当前地点有不可替代的因果必要性"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_SCENE_REPEAT_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_EXPOSITION_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "EXPOSITION_TO_ASYMMETRIC_ACTION",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "exposition_heavy"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "人物主要复述双方已经知道的信息，场景没有形成新的行动差异。",
+    "operator_steps": [
+      "删除不改变选择的背景复述，只保留掌握不对称的部分。",
+      "让信息差分别驱动隐瞒、核验、拒绝或执行动作。",
+      "通过动作后果暴露必要信息，不让人物总结主题和规则。"
+    ],
+    "expected_state_change": "已知信息转化为不同人物的行动选择，并产生新的可观察后果。",
+    "observable_evidence": [
+      "背景信息通过行动显现",
+      "不互相讲述共同已知事实"
+    ],
+    "risks": [
+      "删减后关键因果不清",
+      "用含糊动作代替必要信息"
+    ],
+    "abort_conditions": [
+      "信息确实首次公开",
+      "场景任务就是正式说明或交接"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_EXPOSITION_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSOLIDATE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_CAUSAL_GAP_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "ACTION_RESISTANCE_RESULT_CHAIN",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "causal_gap"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "剧情结果已被写出，但缺少人物行动、现实阻力或中间状态变化支撑。",
+    "operator_steps": [
+      "从目标结果反推必须先发生的最小人物行动。",
+      "加入来自既有状态的阻力，让结果不能完全按计划实现。",
+      "把结果限制在行动真正能造成的范围，并写入后续状态。"
+    ],
+    "expected_state_change": "结果拥有完整的行动—阻力—后果链，变化幅度与行动能力相称。",
+    "observable_evidence": [
+      "关键结果可追溯到人物选择",
+      "阻力改变结果形态"
+    ],
+    "risks": [
+      "补入过多解释拖慢节奏",
+      "新增无关场景"
+    ],
+    "abort_conditions": [
+      "结果是此前行动的延迟后果",
+      "补链违反已确认时间顺序"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "hard_anchor_violation",
+      "unearned_capability_jump"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_CAUSAL_GAP_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAPABILITY_CEILING",
+      "CAUSAL_CONTINUITY",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_STATE_STAGNATION_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "STATE_DELTA_RECOVERY",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "state_stagnation"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "本集重复已有目标、冲突和认知，结束时没有可由下一集继承的新状态。",
+    "operator_steps": [
+      "列出开场已有状态，禁止再次把它们当作本集结果。",
+      "选择一个当前人物能够改变的最小状态对象。",
+      "通过有成本行动使其增加、减少、重定义或锁定。"
+    ],
+    "expected_state_change": "本集至少产生一项非重复、可被下一集直接引用的状态差异。",
+    "observable_evidence": [
+      "集末状态与集初可比较",
+      "变化来自当前人物行动"
+    ],
+    "risks": [
+      "为制造变化强行推进过快",
+      "琐碎事实冒充有效变化"
+    ],
+    "abort_conditions": [
+      "本集有意表现失败循环且累积新代价",
+      "可变状态均受硬锚点冻结"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_STATE_STAGNATION_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "RECOVER"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_ANCHOR_CONFLICT_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "PARTIAL_CONFIRMATION_BACKOFF",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [
+      "anchor_forbids_lock",
+      "answer_not_yet_earned"
+    ],
+    "forbids_any": [],
+    "repair_triggers": [
+      "anchor_conflict_risk"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "当前推进可能提前确认被硬锚点保护的身份、答案、能力或最终关系。",
+    "operator_steps": [
+      "定位越界结论中真正有证据支持的最小部分。",
+      "把完整确认改为局部确认、排除一个选项或提出检验条件。",
+      "让人物仍因局部结果改变行动，而不是原地等待。"
+    ],
+    "expected_state_change": "获得合法局部推进，同时被保护的核心结果继续开放。",
+    "observable_evidence": [
+      "局部结论有明确依据",
+      "核心未知项仍被保留"
+    ],
+    "risks": [
+      "退得过多导致无进展",
+      "用含糊措辞掩盖越界"
+    ],
+    "abort_conditions": [
+      "硬锚点已经允许锁定",
+      "局部结论同样缺少证据"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_ANCHOR_CONFLICT_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "TEST",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_EXTERNAL_RESCUE_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "AGENCY_RETURN",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "external_rescue_risk"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "核心困难正被外部人物、巧合或突然出现的便利条件代为解决。",
+    "operator_steps": [
+      "保留外部条件只能提供的事实、期限或有限资源。",
+      "把关键判断和不可逆选择归还给核心人物。",
+      "让人物为采用外部条件付出成本，并承担失败后果。"
+    ],
+    "expected_state_change": "外部力量只改变条件，核心推进仍由人物选择和行动造成。",
+    "observable_evidence": [
+      "核心人物保有决定权",
+      "外部帮助不能单独解决问题"
+    ],
+    "risks": [
+      "表面增加动作但结果仍由外部决定",
+      "删除必要制度条件"
+    ],
+    "abort_conditions": [
+      "外部介入是人物此前行动争取的结果",
+      "故事聚焦不可控灾变后果"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "cost_free_success",
+      "forced_core_resolution",
+      "instant_reconciliation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_EXTERNAL_RESCUE_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_REPAIR_CLOSURE_OVERLOAD_01",
+    "version": "4.0.0-candidate",
+    "layer": "repair",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "CLOSE_DEFER_PRESERVE",
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [
+      "closure_overload"
+    ],
+    "cooldown_episodes": 1,
+    "applicable_situation": "收束阶段同时处理过多支线，导致结论拥挤、代价被抹平或核心边界越界。",
+    "operator_steps": [
+      "把支线分为必须关闭、可明确延后、应合法保留三类。",
+      "只为必须关闭项安排有因果依据的最终行动。",
+      "给延后与保留项一个清楚新状态，不用新秘密代替收束。"
+    ],
+    "expected_state_change": "核心目标完成必要锁定，其余支线被明确延后或保留。",
+    "observable_evidence": [
+      "每条支线有明确归类",
+      "最终行动集中服务核心目标"
+    ],
+    "risks": [
+      "过度删减使次要人物失去落点",
+      "保留项变成无意义悬念"
+    ],
+    "abort_conditions": [
+      "所有支线都直接构成核心目标",
+      "延后会破坏已建立因果"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation",
+      "cost_free_success",
+      "instant_reconciliation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [
+      "GEN_V3_REPAIR_CLOSURE_OVERLOAD_01"
+    ],
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    },
+    "card_type": "REPAIR",
+    "retrieval_mode": "gated",
+    "episode_functions": [
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "invariant_guards": [
+      "AGENCY_OWNERSHIP",
+      "CAUSAL_CONTINUITY",
+      "INFORMATION_OPEN",
+      "RELATIONSHIP_NONRESOLUTION",
+      "RESOURCE_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [],
+    "abstraction_level": "cross_story"
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_PREMATURE_REVEAL_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_UNEARNED_REVEAL",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "INFORMATION_OPEN",
+      "OPEN_OBLIGATION"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "证据或计划只允许局部推进，但候选策略可能提前确认核心身份、答案或最终解释。",
+    "operator_steps": [
+      "定位被保护的核心未知项和当前可合法确认的最小结论。",
+      "阻断完整揭示，只允许排除、局部确认或形成下一项检验。",
+      "确保局部结果仍改变人物的实际行动。"
+    ],
+    "expected_state_change": "核心未知继续开放，局部信息变化具有证据和行动后果。",
+    "observable_evidence": [
+      "核心答案未被确认",
+      "局部结论改变下一步"
+    ],
+    "risks": [
+      "保护过度可能造成原地踏步",
+      "局部结论可能仍暗示唯一答案"
+    ],
+    "abort_conditions": [
+      "本集计划明确要求完成核心揭示",
+      "证据链已充分且不存在保护锚点"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_core_resolution",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_FAKE_CHOICE_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_FAKE_CHOICE",
+    "episode_functions": [
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "OPTION_OPEN",
+      "AGENCY_OWNERSHIP"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "fake_choice",
+      "cost_free_success"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "候选策略要求作出选择，但人物实际上没有两条可执行且代价不同的路径。",
+    "operator_steps": [
+      "列出每个选项需要的权限、资源和现实成本。",
+      "删除不可执行的伪选项，把场景改为承担限制或争取新条件。",
+      "只有两条路径都真实可走时才保留选择结构。"
+    ],
+    "expected_state_change": "人物面对真实限制或真实取舍，不用口头二选一伪造能动性。",
+    "observable_evidence": [
+      "每个保留选项均可执行",
+      "选择会关闭不同可能"
+    ],
+    "risks": [
+      "过度审查会削弱必要犹豫",
+      "把价值冲突误判为伪选择"
+    ],
+    "abort_conditions": [
+      "选择本身是人物对不可控结果的态度表达",
+      "计划要求展示被迫接受而非自由选择"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "fake_choice",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_CONSEQUENCE_RESET_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_CONSEQUENCE_RESET",
+    "episode_functions": [
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "ESTABLISHED_LOSS",
+      "CAUSAL_CONTINUITY"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "state_reset",
+      "cost_free_success"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "此前已经发生永久损失、能力下降或路径关闭，候选策略可能用新便利恢复旧状态。",
+    "operator_steps": [
+      "列出不可逆损失及其当前影响。",
+      "阻断恢复原状的资源、巧合或口头撤销。",
+      "若需恢复行动空间，只允许建立受损后的有限新路径。"
+    ],
+    "expected_state_change": "既有损失继续生效，新进展建立在损失后的状态上。",
+    "observable_evidence": [
+      "损失仍进入资源或责任计算",
+      "新路径不等价于原路径"
+    ],
+    "risks": [
+      "可能误拦合理的长期恢复",
+      "只保留痛苦而不给人物行动空间"
+    ],
+    "abort_conditions": [
+      "此前明确标记为暂时损失",
+      "恢复过程已被多集行动充分建立"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "state_reset",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_INSTANT_RECONCILIATION_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_INSTANT_RECONCILIATION",
+    "episode_functions": [
+      "PROGRESS",
+      "TEST",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "RELATIONSHIP_NONRESOLUTION"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "instant_reconciliation",
+      "hard_anchor_violation"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "一次合作、道歉或成功可能被扩大成全面信任、彻底和解或所有边界取消。",
+    "operator_steps": [
+      "界定本次行动实际证明的最小关系变化。",
+      "保留未被行动覆盖的分歧、权限和责任债务。",
+      "把关系进展写成有限授权或下一次可撤回合作。"
+    ],
+    "expected_state_change": "关系只在被验证的范围内变化，长期分歧保持可追踪。",
+    "observable_evidence": [
+      "合作范围有明确边界",
+      "未解决分歧仍影响行动"
+    ],
+    "risks": [
+      "边界过细会让关系缺乏情感变化",
+      "重复有限合作可能机械"
+    ],
+    "abort_conditions": [
+      "此前多次行动已完成和解条件",
+      "本集计划明确要求关系最终落定"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "instant_reconciliation",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_UNEARNED_CAPABILITY_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_CAPABILITY_JUMP",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "CAPABILITY_CEILING"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "unearned_capability_jump",
+      "hard_anchor_violation"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "人物尚未完成可验证训练或任务，候选策略却赋予超出既有上限的技能、权限或责任。",
+    "operator_steps": [
+      "找到人物此前真实完成的最大任务范围。",
+      "把新任务缩到可观察、可失败的下一工序。",
+      "责任扩大必须等待本集结果验证，不能预先授予。"
+    ],
+    "expected_state_change": "能力增长保持渐进，职责范围与已证明结果一致。",
+    "observable_evidence": [
+      "任务位于既有能力邻近范围",
+      "扩权以完成结果为依据"
+    ],
+    "risks": [
+      "过度保守会阻止合理挑战",
+      "工序拆分可能拖慢节奏"
+    ],
+    "abort_conditions": [
+      "人物此前已在同等难度任务中稳定成功",
+      "新增能力来自明确建立的工具或团队程序"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unearned_capability_jump",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_EXTERNAL_RESCUE_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_EXTERNAL_RESCUE",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "PRESERVE",
+      "CONSOLIDATE",
+      "RECOVER",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "RESOURCE_CEILING",
+      "AGENCY_OWNERSHIP"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "external_rescue",
+      "cost_free_success"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "核心困难可能被陌生人物、政策通融、偶然资源或突然出现的专业能力直接解决。",
+    "operator_steps": [
+      "区分外部条件能提供的信息与核心人物必须完成的决定。",
+      "删除足以单独解决问题的便利输入。",
+      "保留外部条件时，让人物通过既有行动争取并承担采用成本。"
+    ],
+    "expected_state_change": "外部条件最多改变约束，关键推进仍由核心人物的行动造成。",
+    "observable_evidence": [
+      "核心人物保有决定权",
+      "帮助无法独立完成目标"
+    ],
+    "risks": [
+      "可能误拦制度环境的真实作用",
+      "强行个人化系统性问题"
+    ],
+    "abort_conditions": [
+      "外部介入是此前行动的延迟结果",
+      "故事目标就是承受不可控外力"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "external_rescue",
+      "cost_free_success"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_EXPOSITION_SUBSTITUTION_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_EXPOSITION_AS_ACTION",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "exposition_substitution"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "候选策略主要依赖人物复述规则、背景或结论，却把说明本身当作剧情推进。",
+    "operator_steps": [
+      "保留真正影响选择的最少信息。",
+      "让不同人物依据掌握差异采取核验、拒绝、执行或隐瞒行动。",
+      "用行动结果证明必要信息，不让总结台词替代状态变化。"
+    ],
+    "expected_state_change": "信息通过行动产生差异和后果，说明不再冒充推进。",
+    "observable_evidence": [
+      "至少一项行动由信息差触发",
+      "集末存在非口头状态变化"
+    ],
+    "risks": [
+      "删减过度会损害理解",
+      "动作可能沦为说明装饰"
+    ],
+    "abort_conditions": [
+      "场景任务就是首次正式告知或程序交接",
+      "受众必须获得此前完全未知的规则"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "exposition_substitution"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_FORCED_ESCALATION_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_FORCED_ESCALATION",
+    "episode_functions": [
+      "PRESERVE",
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "CAUSAL_CONTINUITY",
+      "OPEN_OBLIGATION"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "forced_escalation",
+      "hard_anchor_violation"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "本集功能是维持、整理或有限关闭，但候选策略为制造戏剧性强行增加灾难、秘密或关系破裂。",
+    "operator_steps": [
+      "确认本集必须保护和必须完成的最小事项。",
+      "删除不由既有条件产生的新危机。",
+      "用执行摩擦、资源取舍或局部失败形成张力，不升级核心冲突。"
+    ],
+    "expected_state_change": "本集在目标功能内产生局部变化，不以无依据升级替代推进。",
+    "observable_evidence": [
+      "压力来自既有状态",
+      "核心冲突未被无故放大"
+    ],
+    "risks": [
+      "可能让中后段节奏过平",
+      "局部摩擦可能缺乏分量"
+    ],
+    "abort_conditions": [
+      "既有倒计时或因果已经到达爆发点",
+      "计划明确要求兑现此前建立的重大后果"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "forced_escalation",
+      "hard_anchor_violation"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  },
+  {
+    "memory_id": "GEN_V4_ANTI_OBLIGATION_DROP_01",
+    "version": "4.0.0-candidate",
+    "layer": "anti_pattern",
+    "card_type": "ANTI_PATTERN",
+    "retrieval_mode": "blocker_only",
+    "status": "candidate",
+    "primary_move_id": null,
+    "secondary_move_ids": [],
+    "mechanism_family": "BLOCK_OBLIGATION_DROP",
+    "episode_functions": [
+      "INITIATE",
+      "PROGRESS",
+      "TEST",
+      "CONSEQUENCE",
+      "CONSOLIDATE",
+      "CLOSE"
+    ],
+    "applicable_phases": [
+      "setup",
+      "expansion",
+      "escalation",
+      "closure"
+    ],
+    "requires_all": [],
+    "requires_any": [],
+    "forbids_any": [],
+    "repair_triggers": [],
+    "invariant_guards": [
+      "OPEN_OBLIGATION"
+    ],
+    "conflicts_with_invariants": [],
+    "risk_outcomes": [],
+    "blocks_outcomes": [
+      "unresolved_obligation_drop"
+    ],
+    "cooldown_episodes": 0,
+    "applicable_situation": "此前埋下的伏笔、承诺、未解线程或责任，候选策略可能直接忽略、遗忘或不再提及。",
+    "operator_steps": [
+      "列出本集之前仍待兑现的伏笔、承诺、未解线程或责任。",
+      "禁止无声丢弃：每项义务要么被推进/兑现，要么被显式延期并说明原因。",
+      "若某义务确已失效，需通过因果（而非遗忘）使其自然关闭。"
+    ],
+    "expected_state_change": "已埋设义务要么被推进或兑现，要么被显式保留，不被无声丢弃。",
+    "observable_evidence": [
+      "义务清单被显式处理",
+      "无被遗忘的伏笔或承诺"
+    ],
+    "risks": [
+      "过度保护会拖累节奏",
+      "显式处理全部义务可能生硬"
+    ],
+    "abort_conditions": [
+      "义务已在多集前通过因果自然关闭",
+      "本集计划明确要求聚焦主线、暂缓支线"
+    ],
+    "prohibited_inventions": [
+      "new_key_actor",
+      "new_decisive_resource",
+      "unestablished_secret",
+      "coincidental_rescue"
+    ],
+    "prohibited_outcomes": [
+      "unresolved_obligation_drop"
+    ],
+    "anti_copy_rules": [
+      "use_only_current_context_entities",
+      "instantiate_roles_not_examples",
+      "do_not_repeat_card_wording_as_dialogue",
+      "do_not_add_genre_specific_props"
+    ],
+    "source_type": "curated_general_v4",
+    "parent_memory_ids": [],
+    "abstraction_level": "cross_story",
+    "curator_prior": null,
+    "utility": {
+      "exposure_count": 0,
+      "adoption_count": 0,
+      "adoption_rate": null,
+      "success_count": 0,
+      "harm_count": 0,
+      "story_coverage": [],
+      "mean_state_delta": null,
+      "mean_causal_delta": null,
+      "mean_mechanism_delta": null,
+      "mean_repeat_delta": null,
+      "mean_future_debt_delta": null,
+      "model_results": {},
+      "last_validated_at": null
+    }
+  }
+]

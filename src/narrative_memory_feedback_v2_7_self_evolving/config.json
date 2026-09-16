@@ -1,0 +1,422 @@
+{
+  "schema_version": "0.1",
+  "protocol_id": "nmf_long_crossgenre_v3_2_self_evolving_v4",
+  "seed": 20260804,
+  "episode_ids": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E38",
+    "E39",
+    "E40"
+  ],
+  "runs_per_condition": 3,
+  "conditions": {
+    "A_state_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false
+    },
+    "A_append_baseline": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "lifecycle": false
+    },
+    "B_high_diverse_frozen": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "frozen",
+      "retrieval_enabled": true
+    },
+    "C_high_homogeneous_frozen": {
+      "experience_quality": "high",
+      "experience_diversity": "low",
+      "pool_mode": "frozen",
+      "retrieval_enabled": true
+    },
+    "D_high_diverse_append": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "append_all",
+      "retrieval_enabled": true
+    },
+    "E_high_homogeneous_append": {
+      "experience_quality": "high",
+      "experience_diversity": "low",
+      "pool_mode": "append_all",
+      "retrieval_enabled": true
+    },
+    "F_low_append": {
+      "experience_quality": "low",
+      "experience_diversity": "matched",
+      "pool_mode": "append_all",
+      "retrieval_enabled": true
+    },
+    "G_prev_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "feed_state": false,
+      "feed_previous_script": true
+    },
+    "R0_current": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "frozen",
+      "retrieval_enabled": true
+    },
+    "R1_no_exposure": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "frozen",
+      "retrieval_enabled": true
+    },
+    "R3_controlled": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "frozen",
+      "retrieval_enabled": true
+    },
+    "D_diverse": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "append_all",
+      "retrieval_enabled": true
+    },
+    "D_random": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "append_all",
+      "retrieval_enabled": true
+    },
+    "D_no_card": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "append_all",
+      "retrieval_enabled": true
+    },
+    "D_diverse_expert_only": {
+      "experience_quality": "high",
+      "experience_diversity": "high",
+      "pool_mode": "frozen",
+      "retrieval_enabled": true
+    },
+    "S1_lifecycle": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false
+    },
+    "S1_lifecycle_v4": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true
+    },
+    "S1_lifecycle_v4_lenient": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "v4_lenient": true
+    },
+    "S1_lifecycle_v4_function_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "v4_variant": "function_only"
+    },
+    "S1_lifecycle_v4_gate_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "v4_variant": "gate_only"
+    },
+    "S1_lifecycle_v4_gate_repair": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "v4_variant": "gate_repair",
+      "repair_diagnostics": "basic"
+    },
+    "S1_lifecycle_v4_gate_repair_full": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "v4_variant": "gate_repair",
+      "repair_diagnostics": "full"
+    },
+    "S1_lifecycle_v4_strategy_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "v4_variant": "strategy_only"
+    },
+    "G_expert_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "self_evolving_v4": "expert_only"
+    },
+    "G_naive_append": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "self_evolving_v4": "naive"
+    },
+    "G_gated_append": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "self_evolving_v4": "gated"
+    },
+    "S1_lifecycle_v4_obligation": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true
+    },
+    "S1_lifecycle_v4_obligation_retrieval": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true
+    },
+    "P1_framing_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true,
+      "character_trace": "framing_only"
+    },
+    "P2_character_trace": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true,
+      "character_trace": "trace"
+    },
+    "P2_emotion_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true,
+      "character_trace": "emotion_only"
+    },
+    "P2_agency_only": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true,
+      "character_trace": "agency_only"
+    },
+    "P3_character_gate": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true,
+      "character_trace": "trace",
+      "character_trace_gate": true
+    },
+    "Q1_no_rel_debt_relationship": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "v4_gated_cards": true,
+      "obligation_memory": true,
+      "obligation_retrieval": true,
+      "relationship_memory": true,
+      "obligation_exclude_relationship_debt": true
+    },
+    "S3_obligation": {
+      "experience_quality": "none",
+      "experience_diversity": "none",
+      "pool_mode": "none",
+      "retrieval_enabled": false,
+      "obligation_memory": true
+    }
+  },
+  "retrieval_intervention_legend": {
+    "purpose": "逐步消融检索机制对创意同质化的影响：区分“相关检索本身”与“热门强化/强制 Top-k/候选缺多样性”的影响",
+    "first_criterion": "R3_controlled - A_state_only：核心判据，受控相关检索 vs 无记忆基线，判断相关性检索本身是否导致同质化",
+    "first_actionable": "R1_no_exposure：第一可落地干预，仅关闭正曝光强化（exposure_weight=0），零风险低成本检验热门记忆锁定主因",
+    "R0_current": "当前检索器（含曝光强化），等同 B 的高多样冻结池；用于对照曝光项贡献",
+    "R1_no_exposure": "R0 + 曝光项置零",
+    "R3_controlled": "R0 + 曝光置零 + 最低相似度门槛(min_similarity) + 簇多样性上限(cluster_diversity_cap)"
+  },
+  "retrieval": {
+    "top_k": 3,
+    "start_episode": "E01",
+    "similarity_weight": 1.0,
+    "quality_weight": 0.15,
+    "exposure_weight": 0.05
+  },
+  "retrieval_overrides": {
+    "R0_current": {},
+    "R1_no_exposure": {
+      "exposure_weight": 0.0
+    },
+    "R3_controlled": {
+      "exposure_weight": 0.0,
+      "min_similarity": 0.0,
+      "cluster_diversity_cap": 1
+    },
+    "D_diverse": {
+      "selection_mode": "diverse",
+      "exposure_weight": 0.0,
+      "recency_weight": 0.8,
+      "redundancy_weight": 0.6,
+      "novelty_weight": 0.6,
+      "min_relevance": 0.0
+    },
+    "D_diverse_expert_only": {
+      "selection_mode": "diverse",
+      "exposure_weight": 0.0,
+      "recency_weight": 0.8,
+      "redundancy_weight": 0.6,
+      "novelty_weight": 0.6,
+      "min_relevance": 0.0
+    },
+    "D_random": {
+      "selection_mode": "random_relevance",
+      "exposure_weight": 0.0,
+      "min_relevance": 0.0
+    },
+    "D_no_card": {
+      "selection_mode": "top_k",
+      "exposure_weight": 0.0,
+      "exclude_writeback": true
+    }
+  },
+  "writeback": {
+    "start_episode": "E01",
+    "max_cards_per_episode": 1,
+    "minimum_confidence": 0.6
+  },
+  "experience_lifecycle": {
+    "minimum_confidence": 0.7,
+    "minimum_quality": 0.7,
+    "duplicate_similarity": 0.72,
+    "trial_probability": 0.5,
+    "promotion_min_exposure": 3,
+    "promotion_min_adoption": 2,
+    "promotion_min_success_rate": 0.65,
+    "promotion_min_contexts": 2,
+    "retire_after_unadopted_exposures": 5
+  },
+  "branch_sampling": {
+    "enabled": false,
+    "checkpoints": [
+      "E02",
+      "E04",
+      "E06",
+      "E08",
+      "E10",
+      "E12",
+      "E14",
+      "E16"
+    ],
+    "candidates_per_checkpoint": 5
+  },
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 1.0,
+    "max_output_tokens": 3600,
+    "presence_penalty": 0,
+    "frequency_penalty": 0
+  },
+  "extraction": {
+    "temperature": 0.0,
+    "max_output_tokens": 4096
+  },
+  "evaluation": {
+    "temperature": 0.0,
+    "max_output_tokens": 6144
+  },
+  "output_characters": {
+    "min": 1200,
+    "max": 2200
+  },
+  "prompt_version": "clean_state_v4_self_evolving_cards_v1",
+  "runtime": {
+    "api_approved": true,
+    "store_prompts": true
+  }
+}

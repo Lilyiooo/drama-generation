@@ -1,0 +1,26 @@
+[
+  {"move_id":"INFO_GAIN","object":"INFO","operation":"GAIN","name":"信息获得","description":"通过核验、比对、询问或实地查看，使认知状态确实前进；只确认可支撑的部分并保留缺口。","legacy_ids":["EVIDENCE_CROSSCHECK"]},
+  {"move_id":"INFO_LOSS","object":"INFO","operation":"LOSS","name":"信息受损","description":"既有信息源失效：记录残缺、证人失声或无法追问、材料被销毁，使认知反而后退。","legacy_ids":[]},
+  {"move_id":"INFO_REFRAME","object":"INFO","operation":"REFRAME","name":"信息重解","description":"不引入新秘密，而是重新解释既有材料，或并列多个可检验解释以维持认知开放。","legacy_ids":["OLD_CLUE_REFRAME","COMPETING_HYPOTHESES"]},
+  {"move_id":"INFO_LOCK","object":"INFO","operation":"LOCK","name":"信息锁定","description":"在证据足够时正当地确认结论、公开事实或落定判断，使该认知不再可退回。","legacy_ids":[]},
+
+  {"move_id":"OPTION_GAIN","object":"OPTION","operation":"GAIN","name":"选项获得","description":"取得新资源、许可、工具、路径或时间，使可行动空间扩大。","legacy_ids":[]},
+  {"move_id":"OPTION_LOSS","object":"OPTION","operation":"LOSS","name":"选项收缩","description":"资源减少、路径被规则或权限关闭、期限收窄，使可行动空间变小。含程序性阻碍与期限压力。","legacy_ids":["PROCEDURAL_OBSTACLE","DEADLINE_PRESSURE"]},
+  {"move_id":"OPTION_REFRAME","object":"OPTION","operation":"REFRAME","name":"选项重配","description":"不新增资源，而是改变现有资源的用途、顺序或组合，形成替代方案。","legacy_ids":[]},
+  {"move_id":"OPTION_LOCK","object":"OPTION","operation":"LOCK","name":"不可逆取舍","description":"做出无法撤回的取舍：卖掉、放弃、拆毁、签下，使某条路径永久关闭。","legacy_ids":[]},
+
+  {"move_id":"BOND_GAIN","object":"BOND","operation":"GAIN","name":"关系推进","description":"建立有限信任、结成有条件同盟或获得他人配合，且以可观察行为体现。","legacy_ids":[]},
+  {"move_id":"BOND_LOSS","object":"BOND","operation":"LOSS","name":"关系破裂","description":"以立场冲突或对峙使关系恶化、合作中断或信任下降，并留下后果。","legacy_ids":["CHARACTER_CONFRONTATION"]},
+  {"move_id":"BOND_REFRAME","object":"BOND","operation":"REFRAME","name":"关系重定义","description":"重新划分责任边界、角色定位或亲疏距离，而非增减信任量。","legacy_ids":[]},
+  {"move_id":"BOND_LOCK","object":"BOND","operation":"LOCK","name":"承诺落地","description":"把关系变化落实为责任人、期限、交接方式与失败补救，形成可继承状态。","legacy_ids":["CONCRETE_COMMITMENT"]},
+
+  {"move_id":"CAPACITY_GAIN","object":"CAPACITY","operation":"GAIN","name":"能力推进","description":"技艺、状态、作品完成度或处境实际前进一档，且代价可见。","legacy_ids":[]},
+  {"move_id":"CAPACITY_LOSS","object":"CAPACITY","operation":"LOSS","name":"能力受损","description":"方案局部失败、身体或状态恶化、作品损坏，产生可追踪后果。","legacy_ids":["PARTIAL_FAILURE"]},
+  {"move_id":"CAPACITY_REFRAME","object":"CAPACITY","operation":"REFRAME","name":"能力重构","description":"更换方法、调整分工或改变自我定位，以既有能力应对新条件。","legacy_ids":[]},
+  {"move_id":"CAPACITY_LOCK","object":"CAPACITY","operation":"LOCK","name":"状态定型","description":"能力、身份或位置被确定下来并被他人承认，此后不再轻易更改。","legacy_ids":[]},
+
+  {"move_id":"COINCIDENTAL_DISCOVERY","object":"ANTIPATTERN","operation":"ANTIPATTERN","name":"偶然发现","description":"依赖巧合或便利信息直接推进，架空人物能动性。","legacy_ids":["COINCIDENTAL_DISCOVERY"]},
+  {"move_id":"VAGUE_RECONCILIATION","object":"ANTIPATTERN","operation":"ANTIPATTERN","name":"模糊缓和","description":"以态度软化替代可执行的关系变化，不留下可继承状态。","legacy_ids":["VAGUE_RECONCILIATION"]},
+  {"move_id":"PREMATURE_REVEAL","object":"ANTIPATTERN","operation":"ANTIPATTERN","name":"过早揭示","description":"在证据不足时锁定身份、答案或动机。","legacy_ids":["PREMATURE_REVEAL"]},
+  {"move_id":"EXTERNAL_RESCUE","object":"ANTIPATTERN","operation":"ANTIPATTERN","name":"外部解围","description":"由外部人物或突发事件替主角解决核心问题。","legacy_ids":["EXTERNAL_RESCUE"]}
+]

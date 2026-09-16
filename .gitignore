@@ -1,0 +1,26 @@
+# Generated trajectories, prompts, API logs, and exported scripts
+outputs/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime logs and temporary files
+*.log
+*.tmp
+*.lock
