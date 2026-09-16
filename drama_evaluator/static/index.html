@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>剧本多维度智能评测</title>
+<style>
+  :root {
+    --bg: #f4f5f9;
+    --card: #ffffff;
+    --text: #1f2430;
+    --muted: #6b7280;
+    --line: #e7e9f0;
+    --accent: #4f46e5;
+    --accent-soft: #eef2ff;
+    --s: #f59e0b;
+    --a: #16a34a;
+    --b: #2563eb;
+    --c: #ea580c;
+    --issue: #e11d48;
+    --highlight: #16a34a;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(16,24,40,.04), 0 8px 24px rgba(16,24,40,.06);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 20px 64px; }
+
+  header.hero {
+    text-align: center;
+    padding: 28px 0 8px;
+  }
+  header.hero h1 {
+    font-size: 26px; margin: 0; letter-spacing: .5px;
+    background: linear-gradient(120deg, #4f46e5, #7c3aed);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  header.hero p { color: var(--muted); margin: 8px 0 0; font-size: 14px; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 22px; margin-top: 20px;
+  }
+
+  /* ---- 输入区 ---- */
+  .dropzone {
+    border: 2px dashed #c9cdea; border-radius: 12px;
+    padding: 34px 20px; text-align: center; cursor: pointer;
+    transition: border-color .2s, background .2s;
+    background: #fafbff;
+  }
+  .dropzone:hover, .dropzone.drag { border-color: var(--accent); background: var(--accent-soft); }
+  .dropzone .icon { font-size: 34px; }
+  .dropzone .main { font-weight: 600; margin-top: 6px; }
+  .dropzone .sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .dropzone .file-name { margin-top: 10px; font-size: 13px; color: var(--accent); font-weight: 600; }
+  #file-input { display: none; }
+
+  .form-row { display: flex; gap: 12px; margin-top: 16px; align-items: flex-end; flex-wrap: wrap; }
+  .field { flex: 1; min-width: 240px; }
+  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .field input {
+    width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px;
+    font-size: 14px; outline: none; transition: border .2s;
+  }
+  .field input:focus { border-color: var(--accent); }
+
+  .btn {
+    border: none; cursor: pointer; font-size: 14px; font-weight: 600;
+    padding: 11px 22px; border-radius: 10px; color: #fff;
+    background: linear-gradient(120deg, #4f46e5, #6d28d9);
+    transition: transform .1s, box-shadow .2s, opacity .2s;
+    white-space: nowrap;
+  }
+  .btn:hover { box-shadow: 0 6px 16px rgba(79,70,229,.3); }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { opacity: .55; cursor: not-allowed; }
+
+  /* ---- 进度 ---- */
+  .progress-stage { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .progress-counts { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+  .bar { height: 10px; background: #edf0f7; border-radius: 999px; overflow: hidden; }
+  .bar-fill { height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, #4f46e5, #7c3aed); transition: width .5s ease; }
+  .error-box {
+    background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c;
+    padding: 14px 16px; border-radius: 10px; font-size: 13px; white-space: pre-wrap; word-break: break-all;
+  }
+
+  /* ---- 结果 ---- */
+  .meta-bar {
+    display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center;
+    color: var(--muted); font-size: 13px; margin: 4px 0 2px;
+  }
+  .meta-bar b { color: var(--text); font-weight: 600; }
+
+  .score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  @media (max-width: 760px) { .score-grid { grid-template-columns: 1fr; } }
+  .score-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 20px; position: relative; overflow: hidden;
+  }
+  .score-card::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  }
+  .score-card.logic::before { background: var(--b); }
+  .score-card.quality::before { background: var(--a); }
+  .score-card.creativity::before { background: var(--s); }
+  .score-top { display: flex; align-items: center; justify-content: space-between; }
+  .score-label { font-size: 15px; font-weight: 700; }
+  .score-main { display: flex; align-items: baseline; gap: 10px; margin-top: 12px; }
+  .score-value { font-size: 44px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+  .score-meta { color: var(--muted); font-size: 11px; line-height: 1.6; margin-top: 12px; }
+  .score-meta span { display: block; }
+
+  .badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 30px; height: 30px; padding: 0 9px; border-radius: 8px;
+    font-weight: 800; font-size: 16px; color: #fff;
+  }
+  .badge.S { background: var(--s); }
+  .badge.A { background: var(--a); }
+  .badge.B { background: var(--b); }
+  .badge.C { background: var(--c); }
+
+  .units { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .unit-chip {
+    font-size: 11px; color: var(--muted); background: #f4f5f9;
+    padding: 3px 8px; border-radius: 999px; border: 1px solid var(--line);
+  }
+  .unit-chip b { color: var(--text); font-weight: 700; margin-left: 3px; }
+  .unit-chip.low b { color: var(--c); }
+  .unit-chip.mid b { color: var(--b); }
+
+  /* ---- 明细 ---- */
+  .dim-section { margin-top: 20px; }
+  .dim-head {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 16px; font-weight: 700; padding: 14px 0 4px;
+  }
+  .group-title {
+    font-size: 13px; color: var(--muted); margin: 14px 0 4px; font-weight: 600;
+    display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none;
+    padding: 6px 8px; border-radius: 8px;
+  }
+  .group-title:hover { background: #f4f5f9; }
+  .group-arrow { font-size: 11px; transition: transform .2s; color: var(--muted); }
+  .group.open .group-arrow { transform: rotate(90deg); }
+  .group-body { display: none; }
+  .group.open .group-body { display: block; }
+
+  .suggestion { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; }
+  .sug-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .sug-title { font-size: 14px; font-weight: 600; flex: 1; min-width: 200px; }
+  .sug-tag { font-size: 11px; color: var(--muted); background: #f4f5f9; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); }
+  .prio { font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
+  .prio.高 { background: #fef2f2; color: #b91c1c; }
+  .prio.中 { background: #fffbeb; color: #b45309; }
+  .prio.低 { background: #f0fdf4; color: #15803d; }
+  .sug-action { font-size: 13px; line-height: 1.7; margin-top: 8px; color: #374151; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .dot.issue { background: var(--issue); }
+  .dot.highlight { background: var(--highlight); }
+  .dot.rejected { background: #9ca3af; }
+
+  .entry {
+    border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px;
+    overflow: hidden; background: #fff;
+  }
+  .entry-summary {
+    display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+    cursor: pointer; user-select: none;
+  }
+  .entry-summary:hover { background: #fafbff; }
+  .sev {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 12px; font-weight: 800;
+  }
+  .sev.S { background: var(--s); }
+  .sev.A { background: var(--b); }
+  .sev.B { background: #64748b; }
+  .entry-unit { flex-shrink: 0; font-size: 11px; color: var(--muted); background: #f4f5f9; padding: 2px 7px; border-radius: 6px; }
+  .entry-claim { flex: 1; font-size: 13px; line-height: 1.5; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .entry-points { flex-shrink: 0; font-size: 12px; font-weight: 700; }
+  .entry-points.neg { color: var(--issue); }
+  .entry-points.pos { color: var(--highlight); }
+  .entry-arrow { flex-shrink: 0; color: var(--muted); font-size: 12px; transition: transform .2s; }
+  .entry.open .entry-arrow { transform: rotate(90deg); }
+
+  .entry-detail { display: none; padding: 0 14px 12px 46px; border-top: 1px dashed var(--line); }
+  .entry.open .entry-detail { display: block; }
+  .entry-detail .quote {
+    background: #f8f9fc; border-left: 3px solid var(--accent);
+    padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #374151;
+    line-height: 1.6; margin: 8px 0; word-break: break-word;
+  }
+  .entry-detail .reason { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  .hidden { display: none !important; }
+  .spinner {
+    width: 16px; height: 16px; border: 2px solid #d9dbe8; border-top-color: var(--accent);
+    border-radius: 50%; animation: spin .8s linear infinite; display: inline-block; vertical-align: -3px; margin-right: 6px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>剧本多维度智能评测</h1>
+    <p>上传 txt 剧本，选择评测模型，一键输出逻辑 / 质量 / 创意三维度评测报告</p>
+  </header>
+
+  <!-- 输入区 -->
+  <div class="card" id="input-card">
+    <div class="dropzone" id="dropzone">
+      <div class="icon">📄</div>
+      <div class="main">点击或拖拽上传 txt 剧本文档</div>
+      <div class="sub">支持 .txt / .md，单文件</div>
+      <div class="file-name" id="file-name"></div>
+    </div>
+    <input type="file" id="file-input" accept=".txt,.md" />
+    <div class="form-row">
+      <div class="field">
+        <label for="model">评测模型</label>
+        <input id="model" list="model-list" value="gpt-5.6-sol" placeholder="例如 gpt-5.6-sol" />
+        <datalist id="model-list">
+          <option value="gpt-5.6-sol"></option>
+          <option value="gpt-5.5"></option>
+          <option value="gemini-3.1-pro"></option>
+          <option value="gemini-2.5-pro"></option>
+        </datalist>
+      </div>
+      <button class="btn" id="start-btn" disabled>开始评测</button>
+    </div>
+  </div>
+
+  <!-- 进度 -->
+  <div class="card hidden" id="progress-card">
+    <div class="progress-stage" id="stage">正在启动评测…</div>
+    <div class="progress-counts" id="counts"></div>
+    <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+  </div>
+
+  <!-- 错误 -->
+  <div class="card hidden" id="error-card"><div class="error-box" id="error-text"></div></div>
+
+  <!-- 结果 -->
+  <div class="hidden" id="result-section">
+    <div class="card" style="padding: 16px 20px;">
+      <div class="meta-bar" id="meta-bar"></div>
+    </div>
+    <div class="score-grid" id="score-grid"></div>
+    <div class="card hidden" id="suggestions-card">
+      <div class="dim-head">下一阶段生成建议</div>
+      <div id="suggestions"></div>
+    </div>
+    <div id="dim-sections"></div>
+  </div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const dropzone = $('#dropzone');
+const fileInput = $('#file-input');
+const fileName = $('#file-name');
+const startBtn = $('#start-btn');
+let selectedFile = null;
+let pollTimer = null;
+
+const RATING_TEXT = { S: 'S', A: 'A', B: 'B', C: 'C' };
+const KIND_TEXT = { issue: '问题', highlight: '亮点' };
+
+dropzone.addEventListener('click', () => fileInput.click());
+dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('drag'); });
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag'));
+dropzone.addEventListener('drop', (e) => {
+  e.preventDefault(); dropzone.classList.remove('drag');
+  if (e.dataTransfer.files.length) setFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length) setFile(fileInput.files[0]);
+});
+
+function setFile(file) {
+  selectedFile = file;
+  fileName.textContent = '已选择：' + file.name;
+  startBtn.disabled = false;
+}
+
+function show(id, on) { $(id).classList.toggle('hidden', !on); }
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function ratingBadge(r) {
+  const v = RATING_TEXT[r] || r || '';
+  return `<span class="badge ${esc(v)}">${esc(v)}</span>`;
+}
+
+startBtn.addEventListener('click', async () => {
+  if (!selectedFile) return;
+  startBtn.disabled = true;
+  show('#error-card', false);
+  show('#result-section', false);
+  show('#progress-card', true);
+  $('#stage').textContent = '正在提交…';
+
+  const fd = new FormData();
+  fd.append('file', selectedFile);
+  fd.append('model', $('#model').value.trim() || 'gpt-5.6-sol');
+
+  try {
+    const resp = await fetch('/api/evaluate', { method: 'POST', body: fd });
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(data.error || '提交失败');
+    poll(data.job_id);
+  } catch (err) {
+    showProgress(false);
+    showError(err.message);
+    startBtn.disabled = false;
+  }
+});
+
+function poll(jobId) {
+  clearTimeout(pollTimer);
+  fetch(`/api/jobs/${jobId}`)
+    .then((r) => r.json())
+    .then((job) => {
+      if (job.status === 'running') {
+        renderProgress(job.progress);
+        pollTimer = setTimeout(() => poll(jobId), 2000);
+      } else if (job.status === 'done') {
+        showProgress(false);
+        renderResult(job);
+        startBtn.disabled = false;
+      } else {
+        showProgress(false);
+        showError(job.error || '评测失败');
+        startBtn.disabled = false;
+      }
+    })
+    .catch((err) => {
+      showError('轮询出错：' + err.message);
+      showProgress(false);
+      startBtn.disabled = false;
+    });
+}
+
+function renderProgress(p) {
+  $('#stage').textContent = p.stage;
+  $('#counts').textContent = `评审 ${p.reviews}/9 · 审核 ${p.audits}/3 · 仲裁 ${p.arbitrations}/3`;
+  $('#bar-fill').style.width = p.percent + '%';
+}
+function showProgress(on) { show('#progress-card', on); }
+function showError(msg) {
+  $('#error-text').textContent = msg;
+  show('#error-card', !!msg);
+}
+
+function renderResult(job) {
+  const r = job.result;
+  const dims = r.dimensions;
+  const order = ['logic', 'quality', 'creativity'];
+
+  $('#meta-bar').innerHTML =
+    `<span>剧本：<b>${esc(r.script ? r.script.split('/').pop() : '-')}</b></span>` +
+    `<span>评测模型：<b>${esc(r.model || '-')}</b></span>` +
+    `<span>评测时间：<b>${esc(job.ended_at || '-')}</b></span>` +
+    `<span>耗时：<b>${formatDuration(job.started_at, job.ended_at)}</b></span>`;
+
+  $('#score-grid').innerHTML = order.map((k) => {
+    const d = dims[k];
+    const cls = { logic: 'logic', quality: 'quality', creativity: 'creativity' }[k];
+    const lowUnits = d.units.filter(u => u.score != null && u.score < 60);
+    const unitChips = d.units.map((u) => {
+      const cls2 = u.score == null ? '' : (u.score < 60 ? 'low' : (u.score < 75 ? 'mid' : ''));
+      return `<span class="unit-chip ${cls2}">${esc(u.label)} <b>${u.score == null ? '-' : u.score.toFixed(0)}</b></span>`;
+    }).join('');
+    return `
+      <div class="score-card ${cls}">
+        <div class="score-top"><span class="score-label">${esc(d.label)}</span>${ratingBadge(d.fusion_rating)}</div>
+        <div class="score-main">
+          <span class="score-value">${d.fusion_score == null ? '-' : d.fusion_score.toFixed(1)}</span>
+        </div>
+        <div class="score-meta">
+          <span>初始均分 ${d.initial_mean == null ? '-' : d.initial_mean.toFixed(1)}</span>
+          <span>台账分 ${d.ledger_score == null ? '-' : d.ledger_score.toFixed(1)} ${d.ledger_rating ? '(' + esc(d.ledger_rating) + ')' : ''}</span>
+          <span>确认 ${d.confirmed_count ?? '-'} · 驳回 ${d.rejected_count ?? '-'}</span>
+        </div>
+        <div class="units">${unitChips}</div>
+      </div>`;
+  }).join('');
+
+  const suggs = r.suggestions || [];
+  $('#suggestions').innerHTML = suggestionsHtml(suggs);
+  $('#suggestions-card').classList.toggle('hidden', !suggs.length);
+
+  $('#dim-sections').innerHTML = order.map((k) => {
+    const d = dims[k];
+    const issues = d.entries.filter(e => e.status === 'confirmed' && e.kind === 'issue');
+    const highlights = d.entries.filter(e => e.status === 'confirmed' && e.kind === 'highlight');
+    const rejected = d.entries.filter(e => e.status !== 'confirmed');
+    return `
+      <div class="card dim-section">
+        <div class="dim-head">${esc(d.label)} · S/A/B 明细</div>
+        ${groupHtml('问题（扣分）', 'issue', issues)}
+        ${groupHtml('亮点（加分）', 'highlight', highlights)}
+        ${groupHtml('已驳回', 'rejected', rejected)}
+      </div>`;
+  }).join('');
+
+  show('#result-section', true);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function groupHtml(title, dotClass, entries) {
+  if (!entries.length) return '';
+  return `
+    <div class="group">
+      <div class="group-title">
+        <span class="group-arrow">▸</span>
+        <span class="dot ${dotClass}"></span>${title}（${entries.length}）
+      </div>
+      <div class="group-body">${entries.map((e) => entryHtml(e)).join('')}</div>
+    </div>`;
+}
+
+function entryHtml(e) {
+  const neg = e.kind === 'issue';
+  const points = e.points == null ? '' : (neg ? '−' : '+') + Math.abs(e.points).toFixed(1);
+  const kindTag = KIND_TEXT[e.kind] || e.kind || '';
+  return `
+    <div class="entry" data-id="${esc(e.id)}">
+      <div class="entry-summary">
+        <span class="sev ${esc(e.severity)}">${esc(e.severity)}</span>
+        <span class="entry-unit">${esc(e.unit)}</span>
+        <span class="entry-claim">${esc(e.claim)}</span>
+        <span class="entry-points ${neg ? 'neg' : 'pos'}">${esc(points)}</span>
+        <span class="entry-arrow">▸</span>
+      </div>
+      <div class="entry-detail">
+        ${e.quote ? `<div class="quote">${esc(e.quote)}</div>` : ''}
+        <div class="reason">${esc(e.reason)}</div>
+      </div>
+    </div>`;
+}
+
+const DIM_LABEL = { logic: '剧本逻辑', quality: '剧本质量', creativity: '剧本创意' };
+
+function suggestionsHtml(list) {
+  if (!list || !list.length) return '';
+  const order = ['高', '中', '低'];
+  const groups = [];
+  order.forEach((p) => {
+    const items = list.filter((s) => s.priority === p);
+    if (items.length) groups.push({ p, items });
+  });
+  const other = list.filter((s) => !order.includes(s.priority));
+  if (other.length) groups.push({ p: '其他', items: other });
+
+  return groups.map((g) => {
+    const badge = g.p === '其他'
+      ? `<span class="prio" style="background:#f4f5f9;color:#6b7280;">其他</span>`
+      : `<span class="prio ${esc(g.p)}">${esc(g.p)}</span>`;
+    return `
+      <div class="group">
+        <div class="group-title">
+          <span class="group-arrow">▸</span>${badge}优先级建议（${g.items.length}）
+        </div>
+        <div class="group-body">${g.items.map((s) => suggestionItemHtml(s)).join('')}</div>
+      </div>`;
+  }).join('');
+}
+
+function suggestionItemHtml(s) {
+  return `
+    <div class="suggestion">
+      <div class="sug-head">
+        <span class="sug-title">${esc(s.title)}</span>
+        <span class="sug-tag">${esc(DIM_LABEL[s.dimension] || s.dimension)} · ${esc(s.next_stage)}</span>
+      </div>
+      <div class="sug-action">${esc(s.action)}</div>
+    </div>`;
+}
+
+document.addEventListener('click', (e) => {
+  const summary = e.target.closest('.entry-summary');
+  if (summary) { summary.parentElement.classList.toggle('open'); return; }
+  const gtitle = e.target.closest('.group-title');
+  if (gtitle) { gtitle.parentElement.classList.toggle('open'); }
+});
+
+function formatDuration(start, end) {
+  if (!start || !end) return '-';
+  const s = new Date(start).getTime(), t = new Date(end).getTime();
+  if (isNaN(s) || isNaN(t)) return '-';
+  const sec = Math.round((t - s) / 1000);
+  if (sec < 60) return sec + ' 秒';
+  const m = Math.floor(sec / 60), r = sec % 60;
+  return m + ' 分 ' + r + ' 秒';
+}
+</script>
+</body>
+</html>

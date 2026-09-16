@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 运行产物（评估结果、manifest 含本机绝对路径）
+output/
+
+# Web 服务运行产物（上传剧本、任务输出）
+web_jobs/
+
+# 环境变量 / 密钥
+.env
+.env.*
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+*.log
