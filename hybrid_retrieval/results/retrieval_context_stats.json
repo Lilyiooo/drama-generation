@@ -1,0 +1,23 @@
+{
+  "scope": "180 generated episodes per arm; character counts are serialized JSON state-view characters measured within each arm's own trajectory.",
+  "full": {
+    "episodes": 180,
+    "mean_full_state_chars": 12323.3,
+    "mean_selected_state_chars": 12323.3,
+    "total_full_state_chars": 2218188,
+    "total_selected_state_chars": 2218188,
+    "retained_percent": 100.0,
+    "reduction_percent": 0.0,
+    "max_selected_state_chars": 24105
+  },
+  "hybrid": {
+    "episodes": 180,
+    "mean_full_state_chars": 13086.1,
+    "mean_selected_state_chars": 5258.2,
+    "total_full_state_chars": 2355494,
+    "total_selected_state_chars": 946478,
+    "retained_percent": 40.18,
+    "reduction_percent": 59.82,
+    "max_selected_state_chars": 6000
+  }
+}

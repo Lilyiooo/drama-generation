@@ -1,6 +1,7 @@
 # New generated trajectories, API logs, and exports stay local.
 # The reviewed historical method and baseline outputs are tracked separately.
 outputs/qwen36_full_best_v1/
+outputs/outline60_state_only_full_hybrid_3run_v1/
 outputs/*.log
 
 # Local credentials and environment overrides

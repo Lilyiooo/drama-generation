@@ -1,0 +1,24 @@
+{
+  "scope": "One 60-episode outline series, three paired runs. State-only lifecycle memory; full versus hybrid state retrieval. Descriptive comparison only.",
+  "arms": {
+    "full": {
+      "complete": 3,
+      "scored": 3,
+      "paired_with_full": 3,
+      "mean_scores": {"logic": 66.74, "quality": 81.123, "creativity": 59.367},
+      "mean_paired_delta_vs_full": {"logic": 0.0, "quality": 0.0, "creativity": 0.0}
+    },
+    "hybrid": {
+      "complete": 3,
+      "scored": 3,
+      "paired_with_full": 3,
+      "mean_scores": {"logic": 67.527, "quality": 82.66, "creativity": 58.773},
+      "mean_paired_delta_vs_full": {"logic": 0.787, "quality": 1.537, "creativity": -0.593}
+    }
+  },
+  "paired_run_deltas_hybrid_minus_full": {
+    "R01": {"logic": -4.67, "quality": 0.73, "creativity": -1.45},
+    "R02": {"logic": 1.47, "quality": 1.0, "creativity": -0.7},
+    "R03": {"logic": 5.56, "quality": 2.88, "creativity": 0.37}
+  }
+}

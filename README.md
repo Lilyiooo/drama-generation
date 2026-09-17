@@ -63,6 +63,10 @@ best_full_script_generator_20260916/
 
 `src` 内是完整原始 Python 包，不依赖 `Tencent-drama` 其他生成源码。Conda 环境不复制，仍使用已有的 `qwen36-vllm`。
 
+## 60 集纯状态 Hybrid 检索
+
+`hybrid_retrieval/` 收录一个与默认版本隔离的附加实验：以一条 60 集古装故事大纲为输入，在不使用义务记忆、经验/策略卡、关系记忆或前集原文的前提下，对比完整状态和混合状态检索。目录内包含输入大纲、检索选择器、复现协议与轻量结果汇总，详见 `hybrid_retrieval/README.md`。它不替换本快照的默认最佳生成方法。
+
 ## 先验证快照
 
 ```bash
